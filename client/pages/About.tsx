@@ -1,67 +1,88 @@
-import Layout from '../components/Layout';
-import { Check, Users, Globe, Award, TrendingUp, Clock, Shield, CheckCircle, ArrowRight, Calculator, FileText, BarChart3 } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Layout from "../components/Layout";
+import {
+  Check,
+  Users,
+  Globe,
+  Award,
+  TrendingUp,
+  Clock,
+  Shield,
+  CheckCircle,
+  ArrowRight,
+  Calculator,
+  FileText,
+  BarChart3,
+} from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function About() {
   const stats = [
-    { number: '500+', label: 'Clients Served', icon: Users },
-    { number: '15+', label: 'Years Experience', icon: Clock },
-    { number: '25+', label: 'Countries Served', icon: Globe },
-    { number: '99%', label: 'Client Satisfaction', icon: Award }
+    { number: "500+", label: "Clients Served", icon: Users },
+    { number: "15+", label: "Years Experience", icon: Clock },
+    { number: "25+", label: "Countries Served", icon: Globe },
+    { number: "99%", label: "Client Satisfaction", icon: Award },
   ];
 
   const processSteps = [
     {
-      step: '01',
-      title: 'Initial Consultation',
-      description: 'We begin with a comprehensive assessment of your current accounting processes, understanding your business needs, challenges, and goals.',
+      step: "01",
+      title: "Introductory Standup",
+      description:
+        "We seek valuable insights into your present accounting status, business goals, and challenges ahead.",
       icon: FileText,
-      color: 'text-blue-600'
+      color: "text-blue-600",
     },
     {
-      step: '02',
-      title: 'Custom Solution Design',
-      description: 'Our experts design a tailored accounting solution that aligns with your business model, industry requirements, and growth objectives.',
+      step: "02",
+      title: "Custom Solution Design",
+      description:
+        "Develop a customized accounting structure aligning with your vision, segment, and growth plan.",
       icon: Calculator,
-      color: 'text-emerald-600'
+      color: "text-emerald-600",
     },
     {
-      step: '03',
-      title: 'Implementation & Setup',
-      description: 'Seamless migration and setup of your accounting systems with minimal disruption to your business operations.',
+      step: "03",
+      title: "Implementation & Setup",
+      description:
+        "Smoothly migrate and roll out your custom accounting systems, minimizing functional interruption.",
       icon: TrendingUp,
-      color: 'text-purple-600'
+      color: "text-purple-600",
     },
     {
-      step: '04',
-      title: 'Ongoing Support & Optimization',
-      description: 'Continuous monitoring, regular reviews, and optimization to ensure your accounting processes deliver maximum value.',
+      step: "04",
+      title: "Ongoing Support",
+      description:
+        "We regularly track performance reviews and strategic alignment to improve your value every step of your journey.",
       icon: BarChart3,
-      color: 'text-orange-600'
-    }
+      color: "text-orange-600",
+    },
   ];
 
   const values = [
     {
-      title: 'Accuracy & Precision',
-      description: 'We maintain the highest standards of accuracy in all our accounting services, ensuring error-free financial records and compliance.',
-      icon: Shield
+      title: "Meticulousness",
+      description:
+        "We offer clean, flawless accounting to keep your financial health at its best and fully compliant.",
+      icon: Shield,
     },
     {
-      title: 'Transparency',
-      description: 'Clear communication and transparent reporting keep you informed about your financial position at all times.',
-      icon: CheckCircle
+      title: "Cutting-edge Innovation",
+      description:
+        "Use the most advanced accounting technology/tools to make your processes most effective for better value.",
+      icon: CheckCircle,
     },
     {
-      title: 'Innovation',
-      description: 'We leverage the latest accounting technologies and software to provide efficient, modern solutions.',
-      icon: TrendingUp
+      title: "100% Transparency",
+      description:
+        "You get neat, transparent, and honest interaction and real-time insights into your financial well-being.",
+      icon: TrendingUp,
     },
     {
-      title: 'Partnership',
-      description: 'We work as your trusted accounting partner, providing strategic insights that drive business growth.',
-      icon: Users
-    }
+      title: "Real Partnership",
+      description:
+        "We're your bookkeeping partner, saving time, resources, and overhead costs, enabling you to focus on your business.",
+      icon: Users,
+    },
   ];
 
   return (
@@ -85,15 +106,23 @@ export default function About() {
               <div className="space-y-6">
                 <div className="inline-flex items-center space-x-2 bg-blue-500/10 dark:bg-blue-400/10 border border-blue-200 dark:border-blue-400/30 rounded-full px-4 py-2">
                   <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
-                  <span className="text-blue-700 dark:text-blue-300 text-sm font-medium">About Mavix Global</span>
+                  <span className="text-blue-700 dark:text-blue-300 text-sm font-medium">
+                    About Mavix Global
+                  </span>
                 </div>
 
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
-                  Your Trusted <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Financial</span> Partner
+                  Your Associate in{" "}
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
+                    Financial
+                  </span>{" "}
+                  Journey
                 </h1>
 
                 <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl">
-                  Comprehensive accounting, bookkeeping, and financial management services across Australia and beyond. We transform your financial challenges into strategic advantages.
+                  In-depth accounting, bookkeeping, and financial planning and
+                  analysis services in the USA & beyond, converting financial
+                  pressure into lasting strategic benefits.
                 </p>
               </div>
 
@@ -158,24 +187,39 @@ export default function About() {
                 </span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-mavix-neutral-dark dark:text-white mb-8">
-                Transforming Financial Management Since 2009
+                Shaping Financial Success Since 2009
               </h2>
               <div className="space-y-6 text-lg text-mavix-gray dark:text-gray-300 leading-relaxed">
                 <p>
-                  Mavix Global was founded with a simple yet powerful vision: to provide small and medium-sized businesses with access to professional accounting services that were previously only available to large corporations.
+                  At Mavix Global, it all started with a clear cause: to reach
+                  out to small and mid-sized businesses with uncompromising
+                  excellence in accounting, which was previously available only
+                  to big corporations.
                 </p>
                 <p>
-                  Over the years, we have evolved into a comprehensive financial services provider, offering everything from basic bookkeeping to complex financial analysis and strategic planning. Our team of qualified accountants, bookkeepers, and financial analysts work tirelessly to ensure our clients' financial success.
+                  We initiated this goal as a vision, but it has now converted
+                  to a full-blown financial services agency. Starting from
+                  accurate bookkeeping to comprehensive financial audit and
+                  strategic alliance, we offer solutions that simplify
+                  number-crunching for long-term growth.
                 </p>
                 <p>
-                  Today, we serve over 500 clients across 25 countries, helping businesses streamline their accounting processes, ensure compliance, and make data-driven financial decisions that drive growth and profitability.
+                  Our team of veteran accountants and other financial
+                  specialists is here just to manage your balance sheets—we're
+                  more devoted to your business success.
+                </p>
+                <p>
+                  We have already served and have a roster of more than 500
+                  clients across 25 countries. They all trust our staff members
+                  for the overall growth of their business and also the volatile
+                  compliance.
                 </p>
               </div>
             </div>
             <div className="relative animate-slide-in-right">
-              <img 
-                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=600&fit=crop&crop=center&auto=format&q=80" 
-                alt="Professional accounting team" 
+              <img
+                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=600&fit=crop&crop=center&auto=format&q=80"
+                alt="Professional accounting team"
                 className="rounded-2xl shadow-2xl w-full"
               />
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-r from-mavix-blue to-purple-600 rounded-full opacity-20 animate-float"></div>
@@ -189,8 +233,8 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="text-center animate-fade-in-up hover:transform hover:scale-105 transition-all duration-300"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
@@ -219,10 +263,24 @@ export default function About() {
               </span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-mavix-neutral-dark dark:text-white mb-6">
-              How We Work With You
+              How We Collaborate With You
             </h2>
             <p className="text-xl text-mavix-gray dark:text-gray-300 max-w-3xl mx-auto">
-              Our proven 4-step process ensures seamless integration and optimal results for your accounting needs.
+              We practice an agile four-step process, ensuring smooth
+              collaboration and rewarding results every time.
+            </p>
+            <br />
+            <p className="text-xl text-mavix-gray dark:text-gray-300 max-w-3xl mx-auto">
+              Our adjustable, four-step method is the backbone of our
+              professional approach, ensuring well-knit and articulate teamwork
+              and powerful outcomes.
+            </p>
+            <br />
+            <p className="text-xl text-mavix-gray dark:text-gray-300 max-w-3xl mx-auto">
+              We stand by you at every stage of your business, offering a
+              transparent and exceptional experience tailored to your specific
+              requirements. This tested method guarantees not just seamless
+              understanding, but also offbeat and consistent results.
             </p>
           </div>
 
@@ -270,14 +328,28 @@ export default function About() {
               Our Core Values
             </h2>
             <p className="text-xl text-mavix-gray dark:text-gray-300 max-w-3xl mx-auto">
-              The principles that guide everything we do and shape our relationships with clients.
+              The foundation of our work and the promise we make to every
+              client.
+            </p>
+            <br />
+            <p className="text-xl text-mavix-gray dark:text-gray-300 max-w-3xl mx-auto">
+              At Mavix Global, our ethical values guide every aspect of our
+              collaboration with clients. Driven by meticulousness, creativity,
+              transparency, and partnership with human touch, we deliver
+              exceptional, compliant accounting services to boost financial
+              health, trust, and business expansion with every partnership.
+            </p>
+            <br />
+            <p className="text-xl text-mavix-gray dark:text-gray-300 max-w-3xl mx-auto">
+              You experience immense integrity, bonding, and effectiveness with
+              each passing day.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {values.map((value, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="bg-white dark:bg-gray-700 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 animate-fade-in-up"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
@@ -310,10 +382,27 @@ export default function About() {
               </span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-mavix-neutral-dark dark:text-white mb-6">
-              Outsourcing Models for Every Business
+              Accounting Outsourcing Solutions for Every Business
             </h2>
             <p className="text-xl text-mavix-gray dark:text-gray-300 max-w-3xl mx-auto">
-              Choose from our flexible outsourcing models designed to meet businesses of all sizes and operational requirements.
+              Choose from our three business models, designed to accommodate
+              businesses of all sizes with specific business needs.
+            </p>
+            <br />
+            <p className="text-xl text-mavix-gray dark:text-gray-300 max-w-3xl mx-auto">
+              Mavix Global's accounting outsourcing services offer seamless
+              financial management tailored for businesses seeking efficiency
+              and precision. Our experts handle bookkeeping, tax compliance,
+              payroll, and reporting with advanced tools and strict
+              confidentiality standards, ensuring your records remain error-free
+              and up to date.
+            </p>
+            <br />
+            <p className="text-xl text-mavix-gray dark:text-gray-300 max-w-3xl mx-auto">
+              By outsourcing to Mavix Global, organizations benefit from reduced
+              operational costs, scalable solutions, and more time to focus on
+              strategic growth, all while enjoying peace of mind and
+              professional support.
             </p>
           </div>
 
@@ -322,49 +411,123 @@ export default function About() {
               <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-3 rounded-lg mb-6 inline-block">
                 <Users className="h-8 w-8" />
               </div>
-              <h3 className="text-2xl font-bold text-mavix-neutral-dark dark:text-white mb-4">Full-Time Equivalent (FTE) Model</h3>
-              <p className="text-mavix-gray dark:text-gray-300 mb-6">Dedicated accounting professionals working exclusively on your business with complete ownership and accountability.</p>
+              <h3 className="text-2xl font-bold text-mavix-neutral-dark dark:text-white mb-4">
+                Full-Time Equivalent (FTE) Model
+              </h3>
+              <p className="text-mavix-gray dark:text-gray-300 mb-6">
+                One of our accounting veterans manages your business, acting as
+                the sole stakeholder of the project.
+              </p>
               <ul className="space-y-3 mb-8">
-                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-emerald-500 mr-3" />40 hours per week dedicated service</li>
-                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-emerald-500 mr-3" />Assigned qualified accountant</li>
-                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-emerald-500 mr-3" />Full business understanding</li>
-                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-emerald-500 mr-3" />Priority support and communication</li>
-                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-emerald-500 mr-3" />Cost-effective alternative to hiring</li>
+                <li className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-emerald-500 mr-3" />
+                  Certified Accounts Specialist is tagged
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-emerald-500 mr-3" />
+                  40 hours/week
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-emerald-500 mr-3" />
+                  Deep Industry Experience
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-emerald-500 mr-3" />
+                  24/7 Support
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-emerald-500 mr-3" />
+                  Option for in-house hiring
+                </li>
               </ul>
-              <button className="w-full bg-mavix-blue text-white py-3 px-6 rounded-lg font-semibold hover:bg-mavix-navy transition-colors">Learn More</button>
+              <button className="w-full bg-mavix-blue text-white py-3 px-6 rounded-lg font-semibold hover:bg-mavix-navy transition-colors">
+                Find More
+              </button>
             </div>
 
-            <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-mavix-blue relative animate-fade-in-up" style={{ animationDelay: '200ms' }}>
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-mavix-blue text-white px-6 py-2 rounded-full text-sm font-bold">Most Popular</div>
+            <div
+              className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-mavix-blue relative animate-fade-in-up"
+              style={{ animationDelay: "200ms" }}
+            >
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-mavix-blue text-white px-6 py-2 rounded-full text-sm font-bold">
+                Most Popular
+              </div>
               <div className="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white p-3 rounded-lg mb-6 inline-block">
                 <Clock className="h-8 w-8" />
               </div>
-              <h3 className="text-2xl font-bold text-mavix-neutral-dark dark:text-white mb-4">Part-Time Equivalent (PTE) Model</h3>
-              <p className="text-mavix-gray dark:text-gray-300 mb-6">Flexible accounting support with dedicated hours per week, perfect for growing businesses with varying needs.</p>
+              <h3 className="text-2xl font-bold text-mavix-neutral-dark dark:text-white mb-4">
+                Part-Time Equivalent (PTE) Model
+              </h3>
+              <p className="text-mavix-gray dark:text-gray-300 mb-6">
+                It is a viable and scalable setup with fixed work hours every
+                week. It is an excellent option for expanding companies.
+              </p>
               <ul className="space-y-3 mb-8">
-                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-emerald-500 mr-3" />10-30 hours per week flexible schedule</li>
-                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-emerald-500 mr-3" />Consistent team assignment</li>
-                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-emerald-500 mr-3" />Scalable service hours</li>
-                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-emerald-500 mr-3" />Predictable monthly costs</li>
-                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-emerald-500 mr-3" />Professional continuity</li>
+                <li className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-emerald-500 mr-3" />
+                  10-30 hours/week, customized timings
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-emerald-500 mr-3" />
+                  Same team member assigned
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-emerald-500 mr-3" />
+                  Option to scale up and down hours
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-emerald-500 mr-3" />
+                  Calculated monthly budgeting
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-emerald-500 mr-3" />
+                  Professional support
+                </li>
               </ul>
-              <button className="w-full bg-mavix-blue text-white py-3 px-6 rounded-lg font-semibold hover:bg-mavix-navy transition-colors">Get Started</button>
+              <button className="w-full bg-mavix-blue text-white py-3 px-6 rounded-lg font-semibold hover:bg-mavix-navy transition-colors">
+                Get Started
+              </button>
             </div>
 
-            <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700 animate-fade-in-up" style={{ animationDelay: '400ms' }}>
+            <div
+              className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700 animate-fade-in-up"
+              style={{ animationDelay: "400ms" }}
+            >
               <div className="bg-gradient-to-r from-purple-500 to-purple-600 text-white p-3 rounded-lg mb-6 inline-block">
                 <Calculator className="h-8 w-8" />
               </div>
-              <h3 className="text-2xl font-bold text-mavix-neutral-dark dark:text-white mb-4">Hourly-Based Outsourcing Solutions</h3>
-              <p className="text-mavix-gray dark:text-gray-300 mb-6">Pay-as-you-go accounting services for specific projects, seasonal work, or one-time requirements.</p>
+              <h3 className="text-2xl font-bold text-mavix-neutral-dark dark:text-white mb-4">
+                Hourly-Based Outsourcing Model
+              </h3>
+              <p className="text-mavix-gray dark:text-gray-300 mb-6">
+                On-demand accounting services are ideal for additional projects
+                or one-off needs.
+              </p>
               <ul className="space-y-3 mb-8">
-                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-emerald-500 mr-3" />Flexible hourly engagement</li>
-                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-emerald-500 mr-3" />Project-specific solutions</li>
-                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-emerald-500 mr-3" />No minimum commitment</li>
-                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-emerald-500 mr-3" />Expert consultation available</li>
-                <li className="flex items-center"><CheckCircle className="h-5 w-5 text-emerald-500 mr-3" />Transparent time tracking</li>
+                <li className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-emerald-500 mr-3" />
+                  Flexible hourly billing
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-emerald-500 mr-3" />
+                  Project-based specialities
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-emerald-500 mr-3" />
+                  No minimum time commitment
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-emerald-500 mr-3" />
+                  Access to expert guidance
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-emerald-500 mr-3" />
+                  Transparent working time
+                </li>
               </ul>
-              <button className="w-full bg-mavix-blue text-white py-3 px-6 rounded-lg font-semibold hover:bg-mavix-navy transition-colors">Discuss Project</button>
+              <button className="w-full bg-mavix-blue text-white py-3 px-6 rounded-lg font-semibold hover:bg-mavix-navy transition-colors">
+                Discuss Your Project
+              </button>
             </div>
           </div>
         </div>
@@ -378,30 +541,46 @@ export default function About() {
               Our Engagement Models
             </h2>
             <p className="text-xl text-mavix-gray dark:text-gray-300 max-w-3xl mx-auto">
-              Choose the engagement model that best fits your business needs and operational requirements.
+              Choose the engagement model that best fits your business needs and
+              operational requirements.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white dark:bg-gray-700 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in-up">
               <Users className="h-12 w-12 text-mavix-blue mb-6" />
-              <h3 className="text-xl font-bold text-mavix-neutral-dark dark:text-white mb-4">Dedicated Team</h3>
+              <h3 className="text-xl font-bold text-mavix-neutral-dark dark:text-white mb-4">
+                Dedicated Team
+              </h3>
               <p className="text-mavix-gray dark:text-gray-300 leading-relaxed">
-                A dedicated team of accounting professionals working exclusively on your account with deep understanding of your business.
+                A dedicated team of accounting professionals working exclusively
+                on your account with deep understanding of your business.
               </p>
             </div>
-            <div className="bg-white dark:bg-gray-700 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
+            <div
+              className="bg-white dark:bg-gray-700 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in-up"
+              style={{ animationDelay: "200ms" }}
+            >
               <TrendingUp className="h-12 w-12 text-emerald-500 mb-6" />
-              <h3 className="text-xl font-bold text-mavix-neutral-dark dark:text-white mb-4">Scalable Support</h3>
+              <h3 className="text-xl font-bold text-mavix-neutral-dark dark:text-white mb-4">
+                Scalable Support
+              </h3>
               <p className="text-mavix-gray dark:text-gray-300 leading-relaxed">
-                Flexible resource allocation that scales up or down based on your business needs and seasonal requirements.
+                Flexible resource allocation that scales up or down based on
+                your business needs and seasonal requirements.
               </p>
             </div>
-            <div className="bg-white dark:bg-gray-700 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in-up" style={{ animationDelay: '400ms' }}>
+            <div
+              className="bg-white dark:bg-gray-700 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in-up"
+              style={{ animationDelay: "400ms" }}
+            >
               <Shield className="h-12 w-12 text-purple-500 mb-6" />
-              <h3 className="text-xl font-bold text-mavix-neutral-dark dark:text-white mb-4">Hybrid Model</h3>
+              <h3 className="text-xl font-bold text-mavix-neutral-dark dark:text-white mb-4">
+                Hybrid Model
+              </h3>
               <p className="text-mavix-gray dark:text-gray-300 leading-relaxed">
-                Combination of dedicated resources for core activities and flexible support for peak periods and special projects.
+                Combination of dedicated resources for core activities and
+                flexible support for peak periods and special projects.
               </p>
             </div>
           </div>
@@ -422,28 +601,74 @@ export default function About() {
               How It Works
             </h2>
             <p className="text-xl text-mavix-gray dark:text-gray-300 max-w-3xl mx-auto">
-              Our streamlined process ensures quick onboarding and seamless integration with your existing operations.
+              Our streamlined process ensures quick onboarding and seamless
+              integration with your existing operations.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             {[
-              { step: 1, title: "Discovery Call", description: "Initial consultation to understand your specific accounting needs and challenges", icon: "📞", color: "from-blue-500 to-blue-600" },
-              { step: 2, title: "Proposal", description: "Customized solution and transparent pricing proposal tailored to your business", icon: "📋", color: "from-emerald-500 to-emerald-600" },
-              { step: 3, title: "Onboarding", description: "Seamless setup and team introduction with comprehensive handover process", icon: "🚀", color: "from-purple-500 to-purple-600" },
-              { step: 4, title: "Delivery", description: "High-quality service delivery begins with dedicated team and clear communication", icon: "⚡", color: "from-orange-500 to-orange-600" },
-              { step: 5, title: "Optimization", description: "Continuous improvement and optimization based on performance metrics and feedback", icon: "📈", color: "from-teal-500 to-teal-600" }
+              {
+                step: 1,
+                title: "Discovery Call",
+                description:
+                  "Initial consultation to understand your specific accounting needs and challenges",
+                icon: "📞",
+                color: "from-blue-500 to-blue-600",
+              },
+              {
+                step: 2,
+                title: "Proposal",
+                description:
+                  "Customized solution and transparent pricing proposal tailored to your business",
+                icon: "📋",
+                color: "from-emerald-500 to-emerald-600",
+              },
+              {
+                step: 3,
+                title: "Onboarding",
+                description:
+                  "Seamless setup and team introduction with comprehensive handover process",
+                icon: "🚀",
+                color: "from-purple-500 to-purple-600",
+              },
+              {
+                step: 4,
+                title: "Delivery",
+                description:
+                  "High-quality service delivery begins with dedicated team and clear communication",
+                icon: "⚡",
+                color: "from-orange-500 to-orange-600",
+              },
+              {
+                step: 5,
+                title: "Optimization",
+                description:
+                  "Continuous improvement and optimization based on performance metrics and feedback",
+                icon: "📈",
+                color: "from-teal-500 to-teal-600",
+              },
             ].map((item, index) => (
-              <div key={index} className="text-center animate-fade-in-up group" style={{ animationDelay: `${index * 150}ms` }}>
+              <div
+                key={index}
+                className="text-center animate-fade-in-up group"
+                style={{ animationDelay: `${index * 150}ms` }}
+              >
                 <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-gray-100 dark:border-gray-700 group-hover:border-mavix-blue">
-                  <div className={`w-20 h-20 bg-gradient-to-r ${item.color} rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-2xl shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                  <div
+                    className={`w-20 h-20 bg-gradient-to-r ${item.color} rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-2xl shadow-lg group-hover:scale-110 transition-transform duration-300`}
+                  >
                     <span className="text-3xl">{item.icon}</span>
                   </div>
                   <div className="absolute -top-3 -right-3 w-8 h-8 bg-mavix-blue text-white rounded-full flex items-center justify-center text-sm font-bold">
                     {item.step}
                   </div>
-                  <h3 className="text-xl font-bold text-mavix-neutral-dark dark:text-white mb-4 group-hover:text-mavix-blue transition-colors">{item.title}</h3>
-                  <p className="text-mavix-gray dark:text-gray-300 leading-relaxed">{item.description}</p>
+                  <h3 className="text-xl font-bold text-mavix-neutral-dark dark:text-white mb-4 group-hover:text-mavix-blue transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-mavix-gray dark:text-gray-300 leading-relaxed">
+                    {item.description}
+                  </p>
                 </div>
                 {index < 4 && (
                   <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
@@ -470,57 +695,74 @@ export default function About() {
               Frequently Asked Questions
             </h2>
             <p className="text-xl text-mavix-gray dark:text-gray-300 max-w-3xl mx-auto">
-              Get answers to common questions about our accounting services and processes.
+              Get answers to common questions about our accounting services and
+              processes.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {[
               {
-                question: "How quickly can you start working on our account?",
-                answer: "We can typically begin within 48-72 hours after the initial setup and document collection. Our rapid onboarding process ensures minimal disruption to your operations.",
+                question: "How fast can you start working on our project?",
+                answer:
+                  "We can start in 48-72 hours after the initial discussion and document supply. We have a flawless onboarding with almost nil disruption to your functions.",
                 icon: "⚡",
-                color: "from-blue-500 to-blue-600"
+                color: "from-blue-500 to-blue-600",
               },
               {
-                question: "What accounting software do you work with?",
-                answer: "We work with all major accounting platforms including Xero, QuickBooks, MYOB, Sage, and FreshBooks. We can also help you transition to a new system if needed.",
+                question: "How credible is your data security?",
+                answer:
+                  "We deploy banking-standard security arrangements. This includes encryption, secure file transfer, robust access controls, and NDA agreements. So, you can trust us for your data security.",
                 icon: "💻",
-                color: "from-emerald-500 to-emerald-600"
+                color: "from-emerald-500 to-emerald-600",
               },
               {
-                question: "How do you ensure data security and confidentiality?",
-                answer: "We implement bank-level security protocols including encryption, secure file transfer, strict access controls, and confidentiality agreements. All our staff are trained in data protection best practices.",
+                question: "What accounting tool do you rely upon?",
+                answer:
+                  "We specialize in advanced software like QuickBooks, Sage, Xero, FreshBooks, etc. We can also help you switch your accounting system to them, if needed.",
                 icon: "🔒",
-                color: "from-purple-500 to-purple-600"
+                color: "from-purple-500 to-purple-600",
               },
               {
-                question: "Can you handle multi-entity and international accounting?",
-                answer: "Yes, we have extensive experience managing multi-entity structures and international operations including foreign currency transactions, transfer pricing, and international tax compliance.",
+                question: "Can you manage multi-company and global accounting?",
+                answer:
+                  "Yes, we manage such situations as well, like managing multi-corporation protocol and global operations, including foreign currency transactions and related tax compliance.",
                 icon: "🌍",
-                color: "from-orange-500 to-orange-600"
+                color: "from-orange-500 to-orange-600",
               },
               {
-                question: "What is your typical response time for queries?",
-                answer: "Standard queries are addressed within 4-6 hours during business hours. Urgent matters are handled immediately, and we provide 24/7 support for critical issues.",
+                question: "What is your response time?",
+                answer:
+                  "Usually, we respond within 4-6 hours during working hours, or else we are here 24/7 for any urgent situation.",
                 icon: "⏰",
-                color: "from-teal-500 to-teal-600"
+                color: "from-teal-500 to-teal-600",
               },
               {
-                question: "Do you provide month-end and year-end reporting?",
-                answer: "Absolutely. We provide comprehensive month-end closes within 5 business days and year-end financial statements with full compliance reporting and audit support.",
+                question: "How well do you deliver reports?",
+                answer:
+                  "We deliver the month-end closing report in 5 business days and the year-end financial statements, along with compliance reports, with full assistance with the audit.",
                 icon: "📊",
-                color: "from-indigo-500 to-indigo-600"
-              }
+                color: "from-indigo-500 to-indigo-600",
+              },
             ].map((faq, index) => (
-              <div key={index} className="bg-white dark:bg-gray-700 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-600 animate-fade-in-up group" style={{ animationDelay: `${index * 100}ms` }}>
+              <div
+                key={index}
+                className="bg-white dark:bg-gray-700 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-600 animate-fade-in-up group"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
                 <div className="flex items-start space-x-4">
-                  <div className={`bg-gradient-to-r ${faq.color} text-white p-3 rounded-xl flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
+                  <div
+                    className={`bg-gradient-to-r ${faq.color} text-white p-3 rounded-xl flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}
+                  >
                     <span className="text-xl">{faq.icon}</span>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-mavix-neutral-dark dark:text-white mb-4 group-hover:text-mavix-blue transition-colors">{faq.question}</h3>
-                    <p className="text-mavix-gray dark:text-gray-300 leading-relaxed">{faq.answer}</p>
+                    <h3 className="text-xl font-bold text-mavix-neutral-dark dark:text-white mb-4 group-hover:text-mavix-blue transition-colors">
+                      {faq.question}
+                    </h3>
+                    <p className="text-mavix-gray dark:text-gray-300 leading-relaxed">
+                      {faq.answer}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -529,13 +771,18 @@ export default function About() {
 
           <div className="text-center mt-16">
             <div className="bg-white dark:bg-gray-700 p-8 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-600">
-              <h3 className="text-2xl font-bold text-mavix-neutral-dark dark:text-white mb-4">Still have questions?</h3>
-              <p className="text-mavix-gray dark:text-gray-300 mb-6">Our accounting experts are here to help you find the perfect solution for your business.</p>
+              <h3 className="text-2xl font-bold text-mavix-neutral-dark dark:text-white mb-4">
+                Need more answers?
+              </h3>
+              <p className="text-mavix-gray dark:text-gray-300 mb-6">
+                Our accounting experts are ready to walk you through the ideal
+                solution for your Business.
+              </p>
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-mavix-blue to-purple-600 text-white px-8 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center"
               >
-                Contact Our Experts
+                Call us to know how we can simplify your finances
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </div>
@@ -549,10 +796,10 @@ export default function About() {
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Transform Your Accounting?
+              Ready to Streamline Your Accounting?
             </h2>
             <p className="text-xl mb-10 text-gray-200">
-              Get a customized quote for your accounting needs. Our team will assess your requirements and provide a comprehensive proposal.
+              Get your free accounting consultation today!
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link
