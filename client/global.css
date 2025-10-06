@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* Dynamic viewport height support for mobile browsers */
+  .min-h-screen-dynamic {
+    min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height for modern browsers */
+    min-height: -webkit-fill-available; /* iOS Safari fallback */
+  }
+
+  .h-screen-dynamic {
+    height: 100vh;
+    height: 100dvh; /* Dynamic viewport height for modern browsers */
+    height: -webkit-fill-available; /* iOS Safari fallback */
+  }
+
+  /* Fix for mobile browsers with floating UI */
+  .min-h-screen-mobile {
+    min-height: calc(100vh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
+    min-height: calc(100dvh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
+  }
+
+  /* Safe area utilities for mobile devices */
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .safe-bottom {
+    padding-bottom: calc(1.5rem + env(safe-area-inset-bottom));
+  }
+
+  .safe-right {
+    margin-right: calc(1.5rem + env(safe-area-inset-right));
+  }
+
+  .pb-safe {
+    padding-bottom: calc(1.5rem + env(safe-area-inset-bottom));
+  }
+
+  /* Enhanced mobile-safe positioning for floating elements */
+  .mobile-safe-bottom {
+    bottom: calc(1.5rem + env(safe-area-inset-bottom, 1.5rem));
+  }
+
+  .mobile-safe-right {
+    right: calc(1.5rem + env(safe-area-inset-right, 1.5rem));
+  }
+
+  /* Improved mobile touch targets */
+  @media (max-width: 768px) {
+    .mobile-touch {
+      min-height: 44px;
+      min-width: 44px;
+    }
+
+    /* Prevent content from being hidden by mobile browser UI */
+    .mobile-viewport-safe {
+      min-height: calc(100vh - env(keyboard-inset-height, 0px));
+      min-height: calc(100dvh - env(keyboard-inset-height, 0px));
+    }
+
+    /* Ensure full content visibility on mobile */
+    .mobile-full-viewport {
+      min-height: calc(100vh - 60px); /* Account for mobile browser UI */
+      min-height: calc(100dvh - 30px); /* Smaller offset for dynamic viewport */
+    }
+
+    /* Mobile safe padding for page content */
+    .mobile-content-safe {
+      padding-bottom: calc(120px + env(safe-area-inset-bottom, 0px));
+    }
+  }
+}
+
+@layer base {
+  /**
+   * Mavix Global brand theme
+   * Updated with brand colors and Mavix Global design system
+  */
+  :root {
+    --background: 225 25% 97%;
+    --foreground: 210 85% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 85% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 85% 12%;
+
+    --primary: 210 85% 12%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 210 14% 89%;
+    --secondary-foreground: 210 85% 12%;
+
+    --muted: 210 14% 89%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 205 100% 40%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 210 85% 12%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 210 85% 7%;
+    --foreground: 210 40% 98%;
+
+    --card: 210 85% 9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 210 85% 9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 210 85% 12%;
+
+    --secondary: 217 33% 18%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 18%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 205 100% 50%;
+    --accent-foreground: 210 85% 12%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 18%;
+    --input: 217 33% 18%;
+    --ring: 212 27% 84%;
+    --sidebar-background: 240 6% 10%;
+    --sidebar-foreground: 240 5% 96%;
+    --sidebar-primary: 224 76% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 4% 16%;
+    --sidebar-accent-foreground: 240 5% 96%;
+    --sidebar-border: 240 4% 16%;
+    --sidebar-ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+  }
+
+  /* Prevent content from being affected by mobile browser UI changes */
+  @supports (height: 100dvh) {
+    body {
+      min-height: 100dvh;
+    }
+  }
+
+  /* Handle iOS Safari viewport units properly */
+  @supports (-webkit-touch-callout: none) {
+    .min-h-screen-dynamic {
+      min-height: -webkit-fill-available;
+    }
+
+    .mobile-viewport-safe {
+      min-height: calc(-webkit-fill-available - 60px);
+    }
+  }
+
+  /* Additional mobile browser compatibility */
+  @media screen and (max-width: 768px) {
+    html {
+      height: -webkit-fill-available;
+    }
+
+    body {
+      min-height: -webkit-fill-available;
+      position: relative;
+    }
+
+    /* Ensure floating elements don't interfere with scrolling */
+    .floating-safe {
+      margin-bottom: calc(100px + env(safe-area-inset-bottom, 20px));
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-mavix-neutral-dark;
+    line-height: 1.2;
+  }
+
+  /* Enhanced visibility for hero titles */
+  .hero-title {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .hero-subtitle {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  }
+
+  .hero-description {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  .geometric-bg {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .geometric-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, transparent 25%, rgba(255,255,255,0.02) 25%, rgba(255,255,255,0.02) 50%, transparent 50%, transparent 75%, rgba(255,255,255,0.02) 75%);
+    background-size: 60px 60px;
+    pointer-events: none;
+    animation: geometric-move 20s linear infinite;
+  }
+
+  /* Custom Animations */
+  @keyframes geometric-move {
+    0% { transform: translateX(0) translateY(0); }
+    100% { transform: translateX(60px) translateY(60px); }
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-in-left {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slide-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-15px) rotate(1deg); }
+    66% { transform: translateY(-5px) rotate(-1deg); }
+  }
+
+  @keyframes glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(12, 31, 62, 0.3); }
+    50% { box-shadow: 0 0 40px rgba(0, 119, 204, 0.6); }
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-down {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes zoom-in {
+    from {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(0, 119, 204, 0.3);
+      transform: scale(1);
+    }
+    50% {
+      box-shadow: 0 0 30px rgba(0, 119, 204, 0.5);
+      transform: scale(1.02);
+    }
+  }
+
+  /* Animation Classes */
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
+  }
+
+  .animate-slide-in-left {
+    animation: slide-in-left 0.8s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 0.8s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scale-in 0.3s ease-out forwards;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.8s ease-out forwards;
+  }
+
+  .animate-slide-down {
+    animation: slide-down 0.8s ease-out forwards;
+  }
+
+  .animate-zoom-in {
+    animation: zoom-in 0.6s ease-out forwards;
+  }
+
+  .animate-gradient-shift {
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+
+  /* Delay Classes */
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+  .delay-600 { animation-delay: 600ms; }
+  .delay-700 { animation-delay: 700ms; }
+  .delay-800 { animation-delay: 800ms; }
+
+  /* Hover Effects */
+  .hover-lift {
+    transition: all 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  }
+
+  /* Scroll Reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease;
+  }
+
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
