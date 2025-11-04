@@ -1,127 +1,124 @@
 import Layout from '../../components/Layout';
-import { Calendar, FileText, CheckCircle, ArrowRight, TrendingUp, Shield, Clock, Award, BarChart3, Calculator, Users, Target } from 'lucide-react';
+import { PiggyBank, FileText, ShieldCheck, Timer, CheckCircle, ArrowRight, Award, BarChart3 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 
 export default function AccountingFinalisation() {
+
   const features = [
     {
-      icon: Calendar,
+      icon: PiggyBank,
       title: 'Year-End Expertise',
-      description: 'Comprehensive year-end accounting services ensuring accurate financial closing and compliance with Australian standards.'
+      description:
+        'Benefit from our year-end accounting expertise, designed to ensure a proper financial close and complete compliance with US GAAP accounting practices.',
     },
     {
       icon: FileText,
       title: 'Financial Statement Preparation',
-      description: 'Professional preparation of profit & loss statements, balance sheets, and cash flow statements for statutory requirements.'
+      description:
+        'We specialize in preparing balance sheets, profit & loss statements, and cash flow reports, ensuring to meet statutory requirements.',
     },
     {
-      icon: Shield,
-      title: 'Compliance Assurance',
-      description: 'Ensure full compliance with ASIC requirements, tax obligations, and industry-specific regulations.'
+      icon: ShieldCheck,
+      title: 'Compliance Adherence',
+      description:
+        'Our veterans ensure your accounts adhere to SEC guidelines, tax liabilities, and industry-specific practices, reducing compliance risks.',
     },
     {
-      icon: TrendingUp,
-      title: 'Performance Analysis',
-      description: 'Detailed analysis of financial performance with insights for strategic business planning and improvement.'
+      icon: BarChart3,
+      title: 'Performance Assessment',
+      description:
+        'Get hold of comprehensive insights into your financial performance for better strategic planning and identifying growth opportunities.',
     },
     {
-      icon: Clock,
+      icon: Timer,
       title: 'Timely Completion',
-      description: 'Efficient process management ensuring all deadlines are met for lodgments and regulatory requirements.'
+      description:
+        'Trustworthy and proper handling of your completion process to meet regulatory deadlines and filing requirements on time.',
     },
     {
       icon: Award,
-      title: 'Professional Quality',
-      description: 'High-quality financial statements prepared by qualified accountants with extensive experience.'
-    }
+      title: 'High-end Quality',
+      description:
+        'Our qualified accountants bring professional experience and a passion for offering accurate financial statements consistently.',
+    },
   ];
 
   const services = [
-    'Trial Balance Preparation & Review',
-    'General Ledger Analysis & Adjustments',
-    'Bank Reconciliation & Cash Management',
-    'Accounts Receivable & Payable Analysis',
-    'Fixed Asset Register Updates',
-    'Depreciation Calculations & Adjustments',
-    'Accruals & Prepayments Processing',
-    'Stock Take & Inventory Valuation',
-    'Profit & Loss Statement Preparation',
-    'Balance Sheet Compilation',
-    'Cash Flow Statement Creation',
-    'Notes to Financial Statements',
-    'Director\'s Report Preparation',
-    'ASIC Lodgment Services',
-    'Tax Return Preparation Support',
-    'Management Reporting & Analysis'
-  ];
-
-  const benefits = [
-    {
-      icon: Shield,
-      title: 'Regulatory Compliance',
-      description: 'Meet all ASIC and ATO requirements with professionally prepared financial statements and timely lodgments.'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Business Insights',
-      description: 'Gain valuable insights into business performance, profitability trends, and areas for improvement.'
-    },
-    {
-      icon: Clock,
-      title: 'Time Efficiency',
-      description: 'Save significant time and resources by outsourcing complex year-end accounting processes to experts.'
-    },
-    {
-      icon: Calculator,
-      title: 'Accuracy Guarantee',
-      description: 'Professional preparation ensures accuracy and reduces the risk of errors in financial statements.'
-    },
-    {
-      icon: Users,
-      title: 'Expert Team',
-      description: 'Access to qualified accountants and specialists without the overhead of full-time employees.'
-    },
-    {
-      icon: Target,
-      title: 'Strategic Planning',
-      description: 'Use finalised accounts as foundation for strategic planning and business development initiatives.'
-    }
+    'Financial Statement Preparation and Review',
+    'Ledger Management',
+    'Tax Submission and Compliance',
+    'Bank and Credit Card Integrations',
+    'Fixed Asset Accounting and Management',
+    'Budgeting and Analysis Support',
+    'Cash Flow Analysis and Management',
+    'Payroll Management and Compliance',
+    'Accounts Payable and Receivable Management',
+    'Month-End and Year-End Close Processes',
+    'Internal Controls and Risk Management',
+    'Audit Support and Liaison',
+    'Performance and Variance Analysis',
+    'Cost Accounting and Profitability Analysis',
+    'CFO Advisory and Strategic Financial Planning',
+    'Credit Card and Bank Reconciliation',
+    'Receivable Processing',
+    'Invoice Processing and Handling',
+    'Expense Tracking and Analysis',
+    'Monthly Financial Reporting',
+    'State and Local Sales Tax Compliance and Reporting',
+    'Defined vs. Actual Performance Analysis',
+    'Inventory Valuation and Tracking',
   ];
 
   const process = [
     {
       step: '01',
-      title: 'Initial Review',
-      description: 'Comprehensive review of existing books, trial balance, and identification of required adjustments and finalisation tasks.'
+      title: ' Initial Conversation',
+      description: 'Understand your financial accounting condition and offer a tailored finalization strategy accordingly.'
     },
     {
       step: '02',
-      title: 'Adjustments & Reconciliation',
-      description: 'Process all necessary journal adjustments, reconcile accounts, and ensure accuracy of financial data.'
+      title: 'Data Mining & Review',
+      description: 'Review financial documents, other files, and also conduct first-hand account tallying to keep it precise and accurate.'
     },
     {
       step: '03',
-      title: 'Financial Statement Preparation',
-      description: 'Prepare complete set of financial statements including profit & loss, balance sheet, and cash flow statements.'
+      title: 'Account Maching & Financial Statement Generation',
+      description: 'We ensure your accounts are accurate by verifying asset records, adjusting, and developing financial records.'
     },
     {
       step: '04',
-      title: 'Review & Lodgment',
-      description: 'Thorough review by senior accountants and assistance with ASIC lodgment and compliance requirements.'
+      title: 'Compliance, Final Audit & Continuous Support',
+      description: 'We prepare tax returns, submit final reports, and deliver continuous support for audits and regulatory inquiries.'
     }
   ];
 
-  const checklist = [
-    'Trial balance reviewed and balanced',
-    'All bank accounts reconciled',
-    'Accounts receivable aged and reviewed',
-    'Accounts payable verified and current',
-    'Fixed asset register updated with depreciation',
-    'Stock take completed and valued',
-    'Accruals and prepayments processed',
-    'Inter-company transactions reconciled',
-    'Tax provisions calculated accurately',
-    'Financial statements prepared and reviewed'
+  const faqs = [
+    {
+      title: "1. How does account finalization support tax adherence?",
+      description: "Account finalization keeps your financial records accurate and complete before tax filing, making your tax return timely and compliant."
+    },
+    {
+      title: "2. How does account finalization help with business decision-making?",
+      description: "We create financial reporting and evaluation to convert your data into actionable insights. We highlight cash flow trends, profitability triggers, and key metrics to help make better strategic decisions."
+    },
+    {
+      title: "3. How fast can you complete the finalization process?",
+      description: "The timeframe depends on the number of transactions and complexity. Our streamlined approach, using veteran expertise, brings results efficiently. We offer a viable timeline tailored to your specific business requirements."
+    },
+    {
+      title: "4. Do you manage inventory valuation and stock counts?",
+      description: "Yes. We perform stock counts and use advanced valuation methods to ensure accurate inventory value, which affects your cost of goods sold and profit assessment."
+    },
+    {
+      title: "5. Can you help with audit preparation through account finalization?",
+      description: "Yes. Account finalization is all about developing audit-ready records. We organize, confirm, and document all back and forth so your records are right, underpinned by evidence, and audit-ready."
+    }
   ];
 
   return (
@@ -149,11 +146,11 @@ export default function AccountingFinalisation() {
                 </div>
 
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
-                  Accounting <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600">Finalisation</span> Services
+                  Accounting <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600">Finalisation Services </span> for Growing Businesses
                 </h1>
 
                 <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-xl">
-                  Professional year-end accounting services that ensure accurate financial reporting, regulatory compliance, and strategic business insights for informed decision-making.
+                  Accurate and timely financial account finalization with compliance and transparency, ensuring your accounts are finalized easily.
                 </p>
               </div>
 
@@ -162,12 +159,12 @@ export default function AccountingFinalisation() {
                   to="/contact"
                   className="group bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center justify-center"
                 >
-                  Start Year-End Process
+                  Call us Today
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <button className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 hover:border-emerald-300 dark:hover:border-emerald-500 px-8 py-4 rounded-2xl font-semibold transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-1">
+                {/* <button className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 hover:border-emerald-300 dark:hover:border-emerald-500 px-8 py-4 rounded-2xl font-semibold transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-1">
                   Free Assessment
-                </button>
+                </button> */}
               </div>
 
               <div className="flex items-center space-x-8 pt-8">
@@ -211,17 +208,19 @@ export default function AccountingFinalisation() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold text-mavix-neutral-dark dark:text-white mb-6">
-              Complete Year-End Accounting Solution
+              Why Choose Our Accounting Finalization Services?
             </h2>
             <p className="text-xl text-mavix-gray dark:text-gray-300 max-w-3xl mx-auto">
-              Comprehensive accounting finalisation services that ensure accuracy, compliance, and valuable business insights.
+              Mavix Global specializes in accounting finalization services orchestrated to bring precision, compliance, and competence to your financial closing.
+              Our consultants  ensure your accounts are well-inspected and streamlined, offering clean and in-depth financial statements.
+              Selecting Mavix Global as your accounting partner, you unveil the benefits of expert supervision, smooth workflows, and the confidence to make insightful strategic decisions for fast and cutting-edge growth.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700 animate-fade-in-up"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
@@ -244,15 +243,19 @@ export default function AccountingFinalisation() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="animate-slide-in-left">
               <h2 className="text-4xl md:text-5xl font-bold text-mavix-neutral-dark dark:text-white mb-8">
-                Comprehensive Finalisation Services
+                Our Accounting Finalization Services in the USA
               </h2>
               <p className="text-xl text-mavix-gray dark:text-gray-300 mb-8 leading-relaxed">
-                Our year-end accounting services cover every aspect of financial finalisation, ensuring complete accuracy and compliance.
+                We engineer our comprehensive financial services to support your business's financial health and compliance.
+
+                Beginning from trial balance generation and ledger review to credit card reconciliation and fixed asset management, our veterans confirm precision and transparency.
+
+                We oversee depreciation, stock valuation, cash flow creation, and in-depth management reporting to businesses to make data-driven business decisions for growth.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {services.map((service, index) => (
-                  <div 
-                    key={index} 
+                  <div
+                    key={index}
                     className="flex items-center space-x-3 animate-fade-in-up"
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
@@ -263,9 +266,9 @@ export default function AccountingFinalisation() {
               </div>
             </div>
             <div className="animate-slide-in-right">
-              <img 
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=600&fit=crop&crop=center&auto=format&q=80" 
-                alt="Financial statement preparation" 
+              <img
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=600&fit=crop&crop=center&auto=format&q=80"
+                alt="Financial statement preparation"
                 className="rounded-2xl shadow-2xl w-full"
               />
             </div>
@@ -273,47 +276,18 @@ export default function AccountingFinalisation() {
         </div>
       </section>
 
-      {/* Benefits Section */}
       <section className="py-24 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold text-mavix-neutral-dark dark:text-white mb-6">
-              Benefits of Professional Finalisation
+              Our Process
             </h2>
             <p className="text-xl text-mavix-gray dark:text-gray-300 max-w-3xl mx-auto">
-              Professional year-end services that deliver accuracy, compliance, and strategic value for your business.
-            </p>
-          </div>
+              Our accounting finalization services confirm precision, compliance, and clarity in your financial reporting.
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <div 
-                key={index} 
-                className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700 animate-fade-in-up"
-                style={{ animationDelay: `${index * 150}ms` }}
-              >
-                <benefit.icon className="h-12 w-12 text-emerald-500 mb-6" />
-                <h3 className="text-xl font-bold text-mavix-neutral-dark dark:text-white mb-4">
-                  {benefit.title}
-                </h3>
-                <p className="text-mavix-gray dark:text-gray-300 leading-relaxed">
-                  {benefit.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              Starting with a short chat to know your specific financial situation and build a strategy that fits your needs. From data collection and review to account reconciliations and year-end amendments, each process is managed articulately to offer clean and reliable financial statements.
 
-      {/* Process Section */}
-      <section className="py-24 bg-mavix-neutral-light dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20 animate-fade-in-up">
-            <h2 className="text-4xl md:text-5xl font-bold text-mavix-neutral-dark dark:text-white mb-6">
-              Our Finalisation Process
-            </h2>
-            <p className="text-xl text-mavix-gray dark:text-gray-300 max-w-3xl mx-auto">
-              A systematic approach ensuring comprehensive and accurate year-end accounting services.
+              This includes tax compliance, final reviews, and long-term support post-finalization.
             </p>
           </div>
 
@@ -341,39 +315,34 @@ export default function AccountingFinalisation() {
         </div>
       </section>
 
-      {/* Finalisation Checklist */}
-      <section className="py-24 bg-white dark:bg-gray-900">
+      <section className="py-24 bg-mavix-neutral-light dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="animate-slide-in-left">
-              <img 
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=600&fit=crop&crop=center&auto=format&q=80" 
-                alt="Year-end checklist completion" 
-                className="rounded-2xl shadow-2xl w-full"
-              />
-            </div>
-            <div className="animate-slide-in-right">
-              <h2 className="text-4xl md:text-5xl font-bold text-mavix-neutral-dark dark:text-white mb-8">
-                Year-End Finalisation Checklist
-              </h2>
-              <p className="text-xl text-mavix-gray dark:text-gray-300 mb-8 leading-relaxed">
-                Our comprehensive checklist ensures nothing is overlooked in your year-end accounting process.
-              </p>
-              <div className="space-y-4">
-                {checklist.map((item, index) => (
-                  <div 
-                    key={index} 
-                    className="flex items-start space-x-4 animate-fade-in-up"
-                    style={{ animationDelay: `${index * 100}ms` }}
-                  >
-                    <div className="bg-emerald-500 bg-opacity-10 p-2 rounded-full flex-shrink-0">
-                      <CheckCircle className="h-5 w-5 text-emerald-500" />
-                    </div>
-                    <span className="text-mavix-gray dark:text-gray-300 text-lg">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+          <div className="text-center mb-16 animate-fade-in-up">
+            <h2 className="text-4xl md:text-5xl font-bold text-mavix-neutral-dark dark:text-white mb-6">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-xl text-mavix-gray dark:text-gray-300 max-w-3xl mx-auto">
+              Find answers to common questions about our accounting outsourcing services.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <Accordion type="single" collapsible className="w-full">
+              {faqs.map((faq, index) => (
+                <AccordionItem key={index} value={`item-${index}`}>
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    <span className="font-semibold text-mavix-neutral-dark dark:text-white">
+                      {faq.title}
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <p className="text-mavix-gray dark:text-gray-300 pt-2">
+                      {faq.description}
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
         </div>
       </section>
@@ -384,21 +353,21 @@ export default function AccountingFinalisation() {
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready for Professional Year-End Services?
+              Looking to outsource your accounting finalization process?
             </h2>
             <p className="text-xl mb-10 text-gray-200">
-              Let our experts handle your accounting finalisation with precision, ensuring compliance and valuable business insights.
+              Associate with Mavix Global’s accounting finalization services to ensure compliant and timely financial closing.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="bg-white text-emerald-600 hover:bg-gray-100 px-10 py-4 rounded-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center justify-center"
               >
-                Start Your Finalisation
+                Complete your books
                 <ArrowRight className="ml-3 h-6 w-6" />
               </Link>
               <button className="border-2 border-white text-white hover:bg-white hover:text-emerald-600 px-10 py-4 rounded-xl font-bold transition-all duration-300 transform hover:scale-105">
-                Free Consultation
+                Schedule a Free Consultation
               </button>
             </div>
           </div>

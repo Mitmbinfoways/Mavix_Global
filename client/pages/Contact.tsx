@@ -1,5 +1,5 @@
 import Layout from '../components/Layout';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, User, Building, Calendar, MessageSquare, Star, Award, Shield, Zap } from 'lucide-react';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, User, Building, Calendar, MessageSquare, Star, Award, Shield, Zap, Clock3 } from 'lucide-react';
 import { useState } from 'react';
 
 export default function Contact() {
@@ -52,7 +52,7 @@ export default function Contact() {
 
   const benefits = [
     {
-      icon: CheckCircle,
+      icon: Clock3,
       title: 'Free 30-Minute Consultation',
       description: 'Comprehensive assessment of your accounting needs with no obligation or cost.'
     },

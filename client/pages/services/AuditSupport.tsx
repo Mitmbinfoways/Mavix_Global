@@ -1,47 +1,47 @@
 import Layout from '../../components/Layout';
-import { FileSearch, Users, Clock, Shield, CheckCircle, ArrowRight, Award, BarChart3, Eye, Target, Zap, TrendingUp } from 'lucide-react';
+import { FileSearch, Users, Shield, CheckCircle, ArrowRight, Award, BarChart3, Eye, } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 
 export default function AuditSupport() {
   const features = [
     {
       icon: FileSearch,
-      title: 'Audit Preparation',
-      description: 'Comprehensive preparation services that ensure your books are audit-ready with all required documentation organized and accessible.'
+      title: 'Accuracy in Every Audit Step',
+      description: 'All your compliance needs are met with minimal hassle by organizing your audit processes efficiently.'
     },
     {
       icon: Users,
-      title: 'Auditor Liaison',
-      description: 'Professional liaison with external auditors, managing all communications and providing required information promptly.'
+      title: 'Secure and Organized Business Data',
+      description: 'Protect your critical data with well-maintained, organized records for hassle-free audit via expert support.'
     },
     {
       icon: Eye,
-      title: 'Documentation Review',
-      description: 'Thorough review of all financial records, supporting documentation, and internal controls to ensure completeness.'
+      title: 'Timely Documentation Support',
+      description: 'Get prompt expert assistance and maintain accurate and systematic documentation with professional support.'
     },
     {
       icon: BarChart3,
-      title: 'Working Papers',
-      description: 'Preparation of detailed working papers and schedules that support financial statement balances and transactions.'
+      title: 'Expert Guidance',
+      description: 'Enjoy peace of mind when experts prepare your business to be fully audit-ready, promoting confidence and reducing risk.'
     },
     {
       icon: Shield,
-      title: 'Compliance Verification',
-      description: 'Verification of compliance with accounting standards, regulatory requirements, and internal policies.'
+      title: 'Transparent Audits',
+      description: 'Start with free counseling for more straightforward and transparent audit processes tailored to your business needs.'
     },
-    {
-      icon: Clock,
-      title: 'Efficient Process',
-      description: 'Streamlined audit support process that minimizes disruption to your business operations and meets all deadlines.'
-    }
   ];
 
   const services = [
-    'Financial Statement Preparation',
-    'Trial Balance Reconciliation',
+    'Financial Statement Generation',
     'Supporting Schedule Creation',
     'Internal Controls Documentation',
-    'Audit Trail Preparation',
+    'Audit Trail Development',
     'Management Letter Response',
     'Prior Year Adjustments',
     'Analytical Review Support',
@@ -52,64 +52,56 @@ export default function AuditSupport() {
     'Inventory Count Support',
     'Related Party Disclosures',
     'Subsequent Events Review',
-    'Going Concern Assessment'
+    'Going Concern Assessment',
   ];
 
-  const benefits = [
-    {
-      icon: Clock,
-      title: 'Reduced Audit Time',
-      description: 'Well-prepared documentation and organized records significantly reduce audit duration and associated costs.'
-    },
-    {
-      icon: Award,
-      title: 'Professional Quality',
-      description: 'High-quality preparation that meets professional standards and auditor expectations.'
-    },
-    {
-      icon: Shield,
-      title: 'Risk Mitigation',
-      description: 'Identify and address potential issues before the audit begins, reducing risk of qualification or delays.'
-    },
-    {
-      icon: Target,
-      title: 'Improved Outcomes',
-      description: 'Better audit outcomes with fewer adjustments and management letter points.'
-    },
-    {
-      icon: Zap,
-      title: 'Efficiency Gains',
-      description: 'Streamlined processes that improve overall financial reporting efficiency and quality.'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Enhanced Controls',
-      description: 'Strengthened internal controls and processes through professional review and recommendations.'
-    }
-  ];
 
   const process = [
     {
       step: '01',
-      title: 'Pre-Audit Planning',
-      description: 'Initial planning meeting to understand audit scope, timeline, and requirements. Development of detailed preparation checklist.'
+      title: 'Initial Assessments',
+      description: 'Inspect your present financial controls, records, and audit preparedness.'
     },
     {
       step: '02',
-      title: 'Documentation Preparation',
-      description: 'Systematic preparation of all required documentation including financial statements, schedules, and supporting evidence.'
+      title: 'Audit Planning',
+      description: 'Create a customized audit plan to align with legal standards and client needs.'
     },
     {
       step: '03',
-      title: 'Internal Review',
-      description: 'Comprehensive internal review of all prepared materials to ensure accuracy, completeness, and compliance.'
+      title: 'Documentation Generation',
+      description: 'Organize and oversee all financial data and reports to ensure audit readiness.'
     },
     {
       step: '04',
-      title: 'Audit Coordination',
-      description: 'Active coordination with auditors throughout the process, providing support and addressing queries promptly.'
+      title: 'Compliance & Control Review',
+      description: 'Inspect internal controls and regulatory discrepancies, suggesting improvements.'
     }
   ];
+
+  const faqs = [
+    {
+      title: "1. What range of audit support do you provide?",
+      description: "It is the process of hiring an agency/company to handle your payroll process for calculations, tax filing, to pay distribution.​​"
+    },
+    {
+      title: "2. Do you help with creating answers to management letters?",
+      description: "Of course! We help you create a clear and effective response to auditors’ management letters."
+    },
+    {
+      title: "3. Can you assist with asset and inventory counts?",
+      description: "Yes, we support confirming assets and recording inventory to ensure everything is added in your audit."
+    },
+    {
+      title: "4. What does your analytical review support service include?",
+      description: "We assess your financial patterns and verify if transactions are recorded on time for  accurate records.​"
+    },
+    {
+      title: "5. We assess your financial patterns and verify if transactions are recorded on time for  accurate records. ",
+      description: "We verify that all relevant party transactions are accurately disclosed and evaluate any events post-reporting deadline that auditors should be aware of."
+    }
+  ];
+
 
   return (
     <Layout>
@@ -136,11 +128,10 @@ export default function AuditSupport() {
                 </div>
 
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
-                  Professional <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-cyan-600">Audit</span> Support
+                  Make your <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-cyan-600">Audit</span> Stress-Free with Audit Support Services USA
                 </h1>
-
                 <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-xl">
-                  Comprehensive audit preparation and support services that ensure smooth, efficient audits with optimal outcomes and minimal business disruption.
+                  Audits, when handled professionally, reduce your worries and liberate you for business growth and innovation. Leveraging Mavix Global’s audit support service, every compliance is dealt with diligently, embedding transparency and accountability in your operations. We ensure your records are audit-ready, with the least disruption.
                 </p>
               </div>
 
@@ -149,11 +140,11 @@ export default function AuditSupport() {
                   to="/contact"
                   className="group bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center justify-center"
                 >
-                  Get Audit Support
+                  Start Today
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <button className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 hover:border-teal-300 dark:hover:border-teal-500 px-8 py-4 rounded-2xl font-semibold transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-1">
-                  Free Audit Review
+                  Free Consultation
                 </button>
               </div>
 
@@ -198,17 +189,21 @@ export default function AuditSupport() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold text-mavix-neutral-dark dark:text-white mb-6">
-              Comprehensive Audit Support
+              Why Choose Our Audit Support Services
             </h2>
             <p className="text-xl text-mavix-gray dark:text-gray-300 max-w-3xl mx-auto">
-              Professional audit support services that ensure your audit runs smoothly and delivers optimal results.
+              Mavix Global’s audit support service is committed to making your audit process stress-free.
+
+              You gain access to our expert guidance and professional management of your financial health, with records that are fully compliant and audit-ready.
+
+              We manage and represent your business before auditors, cutting disruptions, and boosting confidence. Thus helping you focus on your clients and enjoy peace of mind.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700 animate-fade-in-up"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
@@ -231,15 +226,17 @@ export default function AuditSupport() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="animate-slide-in-left">
               <h2 className="text-4xl md:text-5xl font-bold text-mavix-neutral-dark dark:text-white mb-8">
-                Complete Audit Support Services
+                Extensive Audit Support Services for the USA
               </h2>
               <p className="text-xl text-mavix-gray dark:text-gray-300 mb-8 leading-relaxed">
-                Our comprehensive audit support services cover every aspect of audit preparation and execution.
+                At Mavix Global, we specialize in offering end-to-end audit support meant for US businesses, ensuring clean audit processes and complete legal compliance.
+                From conceptualization to final documentation, our specialists handle documentation, controls, and interaction to ensure a stress-free and clean audit.
+                Focus on your business expansion, and we guarantee your audit’s readiness and compliance as per US regulations.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {services.map((service, index) => (
-                  <div 
-                    key={index} 
+                  <div
+                    key={index}
                     className="flex items-center space-x-3 animate-fade-in-up"
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
@@ -250,9 +247,9 @@ export default function AuditSupport() {
               </div>
             </div>
             <div className="animate-slide-in-right">
-              <img 
-                src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=600&fit=crop&crop=center&auto=format&q=80" 
-                alt="Audit documentation and preparation" 
+              <img
+                src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=600&fit=crop&crop=center&auto=format&q=80"
+                alt="Audit documentation and preparation"
                 className="rounded-2xl shadow-2xl w-full"
               />
             </div>
@@ -260,59 +257,29 @@ export default function AuditSupport() {
         </div>
       </section>
 
-      {/* Benefits Section */}
+
       <section className="py-24 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold text-mavix-neutral-dark dark:text-white mb-6">
-              Benefits of Professional Audit Support
+              Process We Follow
             </h2>
             <p className="text-xl text-mavix-gray dark:text-gray-300 max-w-3xl mx-auto">
-              Experience the advantages of professional audit support that delivers efficiency, quality, and optimal outcomes.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <div 
-                key={index} 
-                className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700 animate-fade-in-up"
-                style={{ animationDelay: `${index * 150}ms` }}
-              >
-                <benefit.icon className="h-12 w-12 text-teal-500 mb-6" />
-                <h3 className="text-xl font-bold text-mavix-neutral-dark dark:text-white mb-4">
-                  {benefit.title}
-                </h3>
-                <p className="text-mavix-gray dark:text-gray-300 leading-relaxed">
-                  {benefit.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section className="py-24 bg-mavix-neutral-light dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20 animate-fade-in-up">
-            <h2 className="text-4xl md:text-5xl font-bold text-mavix-neutral-dark dark:text-white mb-6">
-              Our Audit Support Process
-            </h2>
-            <p className="text-xl text-mavix-gray dark:text-gray-300 max-w-3xl mx-auto">
-              A systematic approach that ensures comprehensive audit preparation and seamless execution.
+              Mavix Global’s audit support services are crafted to simplify and refine the audit process for US businesses.
+              We develop a clean and professional path and plan to make your audit process less stressful and flawless.
+              Our years of cumulative industry experience have led us to help you avoid delays, accelerate accuracy, and adhere to defined regulatory practices, so that you can devote your precious time to promoting your business uninterrupted.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {process.map((step, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="text-center animate-fade-in-up h-full"
                 style={{ animationDelay: `${index * 200}ms` }}
               >
                 <div className="bg-white dark:bg-gray-700 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 h-full flex flex-col">
-                  <div className="w-16 h-16 bg-gradient-to-r from-teal-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl">
+                  <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl">
                     {step.step}
                   </div>
                   <h3 className="text-xl font-bold text-mavix-neutral-dark dark:text-white mb-4">
@@ -334,21 +301,22 @@ export default function AuditSupport() {
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready for Seamless Audit Support?
+              Looking to Simplify Your Audits?
             </h2>
             <p className="text-xl mb-10 text-gray-200">
-              Let our experts prepare and support your audit process for optimal outcomes and minimal disruption.
+              Ensure a flawless and compliant audit under professional guidance from Mavix Global.
+              Collaborate with our audit support specialists in the USA for an effortless audit
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link 
-                to="/contact" 
+              {/* <Link
+                to="/contact"
                 className="bg-white text-teal-600 hover:bg-gray-100 px-10 py-4 rounded-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center justify-center"
               >
                 Start Audit Support
                 <ArrowRight className="ml-3 h-6 w-6" />
-              </Link>
+              </Link> */}
               <button className="border-2 border-white text-white hover:bg-white hover:text-teal-600 px-10 py-4 rounded-xl font-bold transition-all duration-300 transform hover:scale-105">
-                Free Audit Consultation
+                Schedule a Free Consultation
               </button>
             </div>
           </div>

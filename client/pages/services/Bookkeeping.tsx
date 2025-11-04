@@ -1,127 +1,143 @@
 import Layout from '../../components/Layout';
 import { Calculator, Clock, Shield, TrendingUp, CheckCircle, ArrowRight, FileText, DollarSign, BarChart3, Users, Zap, Eye } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 
 export default function Bookkeeping() {
+
   const features = [
     {
       icon: Calculator,
-      title: 'Accurate Record Keeping',
-      description: 'Maintain precise financial records with our systematic approach to transaction recording and categorization using advanced accounting software.'
+      title: 'Clean Records',
+      description: 'Keep records of the most minor financial operations, mindfully using the most updated accounting tool.'
     },
     {
       icon: Clock,
-      title: 'Real-time Updates',
-      description: 'Get up-to-date financial information with daily transaction processing, bank reconciliation, and real-time financial reporting.'
+      title: 'Real-Time Access',
+      description: 'Stay connected with your money matters at all times with exact reconciliations and other financial updates.'
     },
     {
       icon: Shield,
-      title: 'Secure & Confidential',
-      description: 'Your financial data is protected with bank-level security, encrypted storage, and strict confidentiality protocols.'
+      title: 'Safe & Personal',
+      description: 'Contain your critical data safely with the highest-level security, secure storage, and complete privacy.'
     },
     {
       icon: BarChart3,
-      title: 'Detailed Reporting',
-      description: 'Comprehensive financial reports including profit & loss, balance sheets, cash flow statements, and custom business reports.'
+      title: 'Detailed Reports',
+      description: 'Get different financial reports and personalized audits to stay updated about the economic health of your business.'
     },
     {
       icon: Users,
-      title: 'Dedicated Team',
-      description: 'Access to qualified bookkeepers and accountants who understand your business and industry-specific requirements.'
+      title: 'Expert Support',
+      description: 'Have access to expert bookkeepers with in-depth know-how of your industry and who care about your goals.'
     },
     {
       icon: Zap,
-      title: 'Streamlined Process',
-      description: 'Efficient workflows that eliminate manual data entry through automation and integration with your business systems.'
+      title: 'Scalable Solutions',
+      description: 'Scale your business with expansion, handling increased transaction volumes, multiple locations, and more.'
     }
   ];
 
   const services = [
-    'Daily Transaction Recording & Categorization',
-    'Bank Account Reconciliation',
-    'Accounts Payable Management',
-    'Accounts Receivable Management',
-    'Credit Card Reconciliation',
-    'Financial Statement Preparation',
-    'Cash Flow Management & Forecasting',
+    'Regular Transaction Recording & Categorization',
+    'Managing Accounts Payable',
+    'Credit Card and Bank Reconciliation',
+    'Cash Flow Control and Analysis',
+    'Receivable Processing',
+    'Invoice Processing & Handling',
+    'Preparing Financial Statements',
     'Expense Tracking & Analysis',
-    'Invoice Processing & Management',
-    'Monthly Financial Reports',
-    'Year-end Financial Preparation',
-    'GST/VAT Compliance & Reporting',
-    'Payroll Integration',
-    'Budget vs Actual Analysis',
+    'Monthly Financial Reporting',
+    'State and Local Sales Tax Compliance & Reporting',
     'Fixed Asset Management',
-    'Inventory Valuation & Tracking'
+    'Payroll Inclusion',
+    'Year-End Financial Close Preparation',
+    'Defined vs. Actual Performance Analysis',
+    'Inventory Valuation & Tracking',
   ];
 
-  const benefits = [
-    {
-      icon: Clock,
-      title: 'Save 15-20 hours per week',
-      description: 'Free up valuable time to focus on core business activities and strategic growth initiatives.'
-    },
-    {
-      icon: DollarSign,
-      title: 'Reduce costs by up to 60%',
-      description: 'Significant cost savings compared to hiring in-house bookkeeping staff with all associated overheads.'
-    },
-    {
-      icon: Shield,
-      title: 'Eliminate financial errors',
-      description: 'Professional oversight ensures accuracy and reduces costly mistakes in your financial records.'
-    },
-    {
-      icon: Eye,
-      title: 'Real-time financial visibility',
-      description: 'Access to current financial data enables informed decision-making and better cash flow management.'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Improve business performance',
-      description: 'Regular financial analysis helps identify trends, opportunities, and areas for improvement.'
-    },
-    {
-      icon: CheckCircle,
-      title: 'Ensure compliance',
-      description: 'Stay compliant with Australian accounting standards, tax regulations, and reporting requirements.'
-    }
-  ];
+  // const benefits = [
+  //   {
+  //     icon: Clock,
+  //     title: 'Save 15-20 hours per week',
+  //     description: 'Free up valuable time to focus on core business activities and strategic growth initiatives.'
+  //   },
+  //   {
+  //     icon: DollarSign,
+  //     title: 'Reduce costs by up to 60%',
+  //     description: 'Significant cost savings compared to hiring in-house bookkeeping staff with all associated overheads.'
+  //   },
+  //   {
+  //     icon: Shield,
+  //     title: 'Eliminate financial errors',
+  //     description: 'Professional oversight ensures accuracy and reduces costly mistakes in your financial records.'
+  //   },
+  //   {
+  //     icon: Eye,
+  //     title: 'Real-time financial visibility',
+  //     description: 'Access to current financial data enables informed decision-making and better cash flow management.'
+  //   },
+  //   {
+  //     icon: TrendingUp,
+  //     title: 'Improve business performance',
+  //     description: 'Regular financial analysis helps identify trends, opportunities, and areas for improvement.'
+  //   },
+  //   {
+  //     icon: CheckCircle,
+  //     title: 'Ensure compliance',
+  //     description: 'Stay compliant with Australian accounting standards, tax regulations, and reporting requirements.'
+  //   }
+  // ];
 
   const process = [
     {
       step: '01',
-      title: 'Initial Assessment',
-      description: 'We evaluate your current bookkeeping processes, systems, and requirements to design a customized solution.'
+      title: ' Initial Study',
+      description: 'Investigate your bookkeeping systems and suggest a better and more tailored solution.'
     },
     {
       step: '02',
-      title: 'System Setup',
-      description: 'Configure accounting software, establish chart of accounts, and integrate with your existing business systems.'
+      title: 'System Reconfiguration',
+      description: 'Install software, tweak the chart of accounts, and integrate with your tools.'
     },
     {
       step: '03',
-      title: 'Data Migration',
-      description: 'Securely transfer historical financial data and ensure continuity with your existing records.'
+      title: 'Data Porting',
+      description: 'Safely shift saved financial data to maintain the critical record of the business without leakage.'
     },
     {
       step: '04',
-      title: 'Ongoing Management',
-      description: 'Daily transaction processing, regular reconciliation, and monthly financial reporting with dedicated support.'
+      title: 'Regular Management',
+      description: 'Manage regular transactions, oversee daily reconciliations, and generate monthly reports.'
     }
   ];
 
   const industries = [
-    'Professional Services',
-    'Retail & E-commerce',
-    'Manufacturing',
-    'Construction & Trades',
-    'Healthcare & Medical',
-    'Technology & Software',
-    'Real Estate',
-    'Hospitality & Tourism',
-    'Non-Profit Organizations',
-    'Import & Export'
+    {
+      title: "1. What bookkeeping services does Mavix Global specialize in?",
+      description: "We, at Mavix Global, are known to manage all your bookkeeping accountabilities with ease. It’s every single transaction entry, payroll handling, bank reconciliation, tax management, detailed reporting, and cloud accounting tools setting up with Xero, QuickBooks, and Sage.​"
+    },
+    {
+      title: "2. What advantages does a business get from outsourcing bookkeeping to Mavix Global?",
+      description: "Outsourcing handles the in-house team's requirements, saving you resources, time, and money on bookkeeping management. You can use this time for business growth and revenue-generating alliances.​"
+    },
+    {
+      title: "3. How safe is my critical data with Mavix Global?",
+      description: "It is 100% safe. Data security is our forte. We understand the significance of privacy and confidentiality of data. Making safety our priority keeps us going. We follow a bank-level security framework, cloud-based servers, multi-factor authentication, and stringent confidentiality agreements.​"
+    },
+    {
+      title: "4. Which accounting software works best?",
+      description: "Xero is great for startups looking for easy and user-friendly interfaces and multiple users. QuickBooks works best in tax prep and reporting. Sage is best for businesses requiring advanced workflow and inventory handling. We use the most suitable one that fits your business needs and size.​"
+    },
+    {
+      title: "5. What is the typical timeline to start my bookkeeping?",
+      description: "We start within days of your first consultation. Our process includes software setup, secure data synchronization, data transfer, and daily financial reporting with ongoing support."
+    }
   ];
 
   return (
@@ -149,11 +165,11 @@ export default function Bookkeeping() {
                 </div>
 
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
-                  Expert <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600">Bookkeeping</span> Services
+                  Professional <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600">Bookkeeping</span> Services USA to Level Up Your Business
                 </h1>
 
                 <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-xl">
-                  Transform your financial management with accurate, timely, and comprehensive bookkeeping services designed to keep your business organized, compliant, and primed for growth.
+                  What if your finances are managed, giving you peace of mind and a more playful and happy life with expert bookkeeping services in the USA? We offer safe, on-time, and faultless records,  keeping you compliant. Save time and focus on more strategic growth of your business.
                 </p>
               </div>
 
@@ -162,7 +178,7 @@ export default function Bookkeeping() {
                   to="/contact"
                   className="group bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center justify-center"
                 >
-                  Start Your Journey
+                  Start Today
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <button className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 hover:border-emerald-300 dark:hover:border-emerald-500 px-8 py-4 rounded-2xl font-semibold transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-1">
@@ -214,14 +230,17 @@ export default function Bookkeeping() {
               Why Choose Our Bookkeeping Services?
             </h2>
             <p className="text-xl text-mavix-gray dark:text-gray-300 max-w-3xl mx-auto">
-              Professional bookkeeping that gives you confidence in your financial data and more time to focus on growing your business.
+              Stop the number crunching game. Relax, get more time to concentrate on expanding your business.
+              No more repetitive and tiring tasks. Get off the spreadsheets and relax.
+              Hand over the tiring financial work to us, and save valuable hours every day. It’s time to focus on what you do best. Penetrate more markets, find new clients, and develop new alliances.
+              Let us take care of the tricky part of your business, so you can promote your business.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700 animate-fade-in-up"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
@@ -244,15 +263,17 @@ export default function Bookkeeping() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="animate-slide-in-left">
               <h2 className="text-4xl md:text-5xl font-bold text-mavix-neutral-dark dark:text-white mb-8">
-                Complete Bookkeeping Services
+                Extensive Bookkeeping Services
               </h2>
               <p className="text-xl text-mavix-gray dark:text-gray-300 mb-8 leading-relaxed">
-                Our comprehensive bookkeeping services cover all aspects of your financial record-keeping needs, ensuring accuracy and compliance at every step.
+                Our all-in-one bookkeeping services can manage every part of your financial data, offering precision and full compliance at every stage.
+                Our bookkeeping package is crafted to manage every aspect of your financial data with immense precision.
+                From regular entries to complex reporting, ensuring accuracy of the data, legal compliance with all accounting standards - we manage all.  Be relaxed, and use your time and resources on expanding your business, with confidence that your finances are in the right hands.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {services.map((service, index) => (
-                  <div 
-                    key={index} 
+                  <div
+                    key={index}
                     className="flex items-center space-x-3 animate-fade-in-up"
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
@@ -263,9 +284,9 @@ export default function Bookkeeping() {
               </div>
             </div>
             <div className="animate-slide-in-right">
-              <img 
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=600&fit=crop&crop=center&auto=format&q=80" 
-                alt="Bookkeeping services overview" 
+              <img
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=600&fit=crop&crop=center&auto=format&q=80"
+                alt="Bookkeeping services overview"
                 className="rounded-2xl shadow-2xl w-full"
               />
             </div>
@@ -273,8 +294,7 @@ export default function Bookkeeping() {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-24 bg-white dark:bg-gray-900">
+      {/* <section className="py-24 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold text-mavix-neutral-dark dark:text-white mb-6">
@@ -287,8 +307,8 @@ export default function Bookkeeping() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700 animate-fade-in-up"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
@@ -303,17 +323,19 @@ export default function Bookkeeping() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Process Section */}
-      <section className="py-24 bg-mavix-neutral-light dark:bg-gray-800">
+      <section className="py-24 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold text-mavix-neutral-dark dark:text-white mb-6">
               Our Proven Process
             </h2>
             <p className="text-xl text-mavix-gray dark:text-gray-300 max-w-3xl mx-auto">
-              A systematic approach that ensures seamless integration and optimal results for your bookkeeping needs.
+              A tested methodology for smooth configuration and the best results for your bookkeeping requirements.
+              We follow a systematic process to configure your bookkeeping services more effectively, efficiently, and securely.
+              Leveraging our professional expertise and flexible workflows, we create an efficient funnel that not only processes your tasks better but also exceeds your expectations, leading to your financial success.
             </p>
           </div>
 
@@ -342,27 +364,34 @@ export default function Bookkeeping() {
       </section>
 
       {/* Industries Section */}
-      <section className="py-24 bg-white dark:bg-gray-900">
+      <section className="py-24 bg-mavix-neutral-light dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold text-mavix-neutral-dark dark:text-white mb-6">
-              Industries We Serve
+              Frequently Asked Questions
             </h2>
             <p className="text-xl text-mavix-gray dark:text-gray-300 max-w-3xl mx-auto">
               We provide specialized bookkeeping services across various industries, understanding unique requirements and compliance needs.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-            {industries.map((industry, index) => (
-              <div 
-                key={index} 
-                className="bg-mavix-neutral-light dark:bg-gray-800 p-6 rounded-xl text-center hover:bg-emerald-50 dark:hover:bg-emerald-900 dark:hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105 animate-fade-in-up"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <span className="text-mavix-gray dark:text-gray-300 font-medium">{industry}</span>
-              </div>
-            ))}
+          <div className="max-w-4xl mx-auto">
+            <Accordion type="single" collapsible className="w-full">
+              {industries.map((industry, index) => (
+                <AccordionItem key={index} value={`item-${index}`}>
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    <span className="font-semibold text-mavix-neutral-dark dark:text-white">
+                      {industry.title}
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <p className="text-mavix-gray dark:text-gray-300 pt-2">
+                      {industry.description}
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
         </div>
       </section>
@@ -373,21 +402,21 @@ export default function Bookkeeping() {
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Streamline Your Bookkeeping?
+              Ready to Simplify Bookkeeping?
             </h2>
             <p className="text-xl mb-10 text-gray-200">
-              Get started with professional bookkeeping services that save you time, ensure accuracy, and provide valuable financial insights.
+              Focus on growing your business. Partner with our expert bookkeepers today.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="bg-white text-emerald-600 hover:bg-gray-100 px-10 py-4 rounded-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center justify-center"
               >
                 Start Your Bookkeeping Service
                 <ArrowRight className="ml-3 h-6 w-6" />
               </Link>
               <button className="border-2 border-white text-white hover:bg-white hover:text-emerald-600 px-10 py-4 rounded-xl font-bold transition-all duration-300 transform hover:scale-105">
-                Schedule Free Consultation
+                Schedule a Free Consultation
               </button>
             </div>
           </div>

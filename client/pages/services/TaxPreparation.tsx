@@ -1,192 +1,120 @@
 import Layout from '../../components/Layout';
-import { Calculator, FileText, TrendingUp, Shield, CheckCircle, ArrowRight, Clock, Award, BarChart3, Users, Zap, Target } from 'lucide-react';
+import { PiggyBank, FileText, ShieldCheck, Timer, CheckCircle, ArrowRight, Award, BarChart3 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 
 export default function TaxPreparation() {
+
   const features = [
     {
-      icon: Calculator,
-      title: 'Strategic Tax Planning',
-      description: 'Proactive tax planning strategies to minimize tax liability and optimize your financial position throughout the year.'
+      icon: PiggyBank,
+      title: 'Comprehensive Tax Expertise',
+      description:
+        'Our team stays current on federal and state tax rules for complete accuracy and compliance for individuals and businesses.',
     },
     {
       icon: FileText,
-      title: 'Comprehensive Tax Preparation',
-      description: 'Expert preparation of individual, company, trust, and partnership tax returns with attention to every detail.'
+      title: 'Enhance Tax Savings',
+      description:
+        'We capture every eligible debit and credit, streamlining tax liabilities to eliminate liabilities and enhance cash flow.',
     },
     {
-      icon: TrendingUp,
-      title: 'Tax Optimization',
-      description: 'Identify and implement legitimate tax optimization strategies to maximize deductions and minimize obligations.'
-    },
-    {
-      icon: Shield,
-      title: 'Compliance Assurance',
-      description: 'Ensure full compliance with ATO requirements and stay updated with the latest tax law changes.'
+      icon: ShieldCheck,
+      title: 'Personalized Tax Planning',
+      description:
+        'Personalized strategies help handle payments, entity frameworks, and ongoing tax efficiency.',
     },
     {
       icon: BarChart3,
-      title: 'Financial Analysis',
-      description: 'Detailed analysis of your financial position to identify tax planning opportunities and risks.'
+      title: 'Correct filings and Reviews',
+      description:
+        'Minute document review and use of updated software guarantee submission precision and cut audit threats.',
     },
     {
-      icon: Clock,
-      title: 'Year-Round Support',
-      description: 'Ongoing tax advice and support throughout the year, not just during tax season.'
-    }
+      icon: Timer,
+      title: 'Continuous Client Support',
+      description:
+        'Expert advisors help with IRS communications, dealing with questions promptly and navigating clients through complexities with clarity.',
+    },
+    {
+      icon: Award,
+      title: 'Advanced Technology Integration',
+      description:
+        'We use advanced tax tools and systems for better processing, accuracy, and fast delivery, leading to more reliable results.',
+    },
   ];
 
   const services = [
     'Individual Tax Return Preparation',
-    'Company Tax Return Preparation',
-    'Trust Tax Return Preparation',
-    'Partnership Tax Return Preparation',
+    'Business Tax Return Preparation (Corporation, S-Corp, Partnership, LLC)',
+    'Trust & Estate Tax Return Preparation',
+    'Small Business Tax Credits & Deductions',
+    'Tax Loss Harvesting & Utilization',
+    'Fringe Benefits & Compensation Tax Planning',
+    'Depreciation & Asset Management',
     'Capital Gains Tax Planning',
-    'Negative Gearing Strategies',
-    'Salary Packaging & Fringe Benefits',
-    'Small Business Tax Concessions',
-    'Depreciation & Asset Planning',
-    'Tax Loss Utilization Strategies',
-    'GST Planning & Compliance',
-    'International Tax Planning',
-    'ATO Audit Support & Representation',
-    'Tax Debt Resolution',
-    'Advance Tax Rulings',
-    'Tax Structure Reviews'
+    'International Tax Compliance & Planning',
+    'IRS Audit Support & Representation',
+    'Tax Debt Resolution & Negotiation',
+    'Entity Structure & Tax Efficiency Reviews',
+    'Estimated Tax Payment Planning',
+    'Succession & Estate Tax Planning',
+    'Tax Credit & Incentive Consulting',
+    'State & Local Tax Compliance',
   ];
 
-  const taxTypes = [
-    {
-      title: 'Individual Tax Returns',
-      description: 'Comprehensive individual tax return preparation for employees, contractors, and business owners.',
-      features: ['PAYG reconciliation', 'Investment income', 'Rental property deductions', 'Work-related expenses'],
-      icon: Users,
-      color: 'text-green-600'
-    },
-    {
-      title: 'Business Tax Returns',
-      description: 'Expert business tax return preparation for companies, partnerships, and trusts.',
-      features: ['Small business concessions', 'Asset depreciation', 'Trading stock adjustments', 'Research & development'],
-      icon: Target,
-      color: 'text-blue-600'
-    },
-    {
-      title: 'Capital Gains Tax',
-      description: 'Strategic planning and calculation of capital gains tax for assets sales and investments.',
-      features: ['CGT exemptions', 'Discount calculations', 'Cost base adjustments', 'Roll-over relief'],
-      icon: TrendingUp,
-      color: 'text-purple-600'
-    },
-    {
-      title: 'International Tax',
-      description: 'Specialized advice for international tax obligations and cross-border transactions.',
-      features: ['Foreign income reporting', 'Transfer pricing', 'Tax treaties', 'CFC rules'],
-      icon: Award,
-      color: 'text-orange-600'
-    }
-  ];
-
-  const planningStrategies = [
-    {
-      strategy: 'Income Splitting',
-      description: 'Distribute income among family members to minimize overall tax liability.',
-      benefit: 'Reduce family tax burden'
-    },
-    {
-      strategy: 'Superannuation Planning',
-      description: 'Maximize superannuation contributions while staying within contribution caps.',
-      benefit: 'Tax-effective retirement savings'
-    },
-    {
-      strategy: 'Asset Protection',
-      description: 'Structure assets to protect wealth while optimizing tax outcomes.',
-      benefit: 'Wealth preservation & tax efficiency'
-    },
-    {
-      strategy: 'Business Structure Optimization',
-      description: 'Choose the most tax-effective business structure for your operations.',
-      benefit: 'Minimize business tax liability'
-    },
-    {
-      strategy: 'Timing Strategies',
-      description: 'Time income and deductions to optimize tax outcomes across financial years.',
-      benefit: 'Cash flow & tax optimization'
-    },
-    {
-      strategy: 'Investment Structuring',
-      description: 'Structure investments for maximum tax efficiency and wealth accumulation.',
-      benefit: 'Enhanced after-tax returns'
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: Calculator,
-      title: 'Maximize tax savings',
-      description: 'Identify all eligible deductions and credits to minimize your tax liability legally.'
-    },
-    {
-      icon: Shield,
-      title: 'Reduce audit risk',
-      description: 'Professional preparation reduces the likelihood of ATO audits and compliance issues.'
-    },
-    {
-      icon: Clock,
-      title: 'Save time & stress',
-      description: 'Eliminate the complexity and time consumption of tax preparation and planning.'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Strategic advantage',
-      description: 'Gain competitive advantage through proactive tax planning and optimization.'
-    },
-    {
-      icon: Award,
-      title: 'Expert knowledge',
-      description: 'Access to qualified tax professionals with deep knowledge of Australian tax law.'
-    },
-    {
-      icon: BarChart3,
-      title: 'Financial insights',
-      description: 'Gain valuable insights into your financial position and tax planning opportunities.'
-    }
-  ];
 
   const process = [
     {
       step: '01',
-      title: 'Financial Review',
-      description: 'Comprehensive review of your financial situation, income sources, and tax obligations to understand your position.'
+      title: 'Initial Consultation',
+      description: 'Understand your business and its finances, credit and debit sources, and tax liabilities to create a tailored plan.'
     },
     {
       step: '02',
-      title: 'Strategy Development',
-      description: 'Develop customized tax strategies based on your financial goals and circumstances.'
+      title: 'Document Exchange and Overview',
+      description: 'Procure and assess all relevant documents, which include income statements, deductions, and credits.'
     },
     {
       step: '03',
-      title: 'Implementation',
-      description: 'Implement tax planning strategies and prepare all required tax returns and documentation.'
+      title: 'Preparation & Refinement',
+      description: 'Prepare tax returns with mindful application of deductions, income, and strategic tax scheduling.'
     },
     {
       step: '04',
-      title: 'Ongoing Support',
-      description: 'Provide ongoing support, monitoring, and adjustments to ensure optimal tax outcomes.'
+      title: 'Filing & Monitoring',
+      description: 'File tax returns precisely and on time; deliver continuous support for audits or queries.'
     }
   ];
 
-  const deductionCategories = [
-    'Work-related expenses & travel',
-    'Investment property deductions',
-    'Business operating expenses',
-    'Professional development & education',
-    'Home office & equipment',
-    'Motor vehicle expenses',
-    'Professional memberships & subscriptions',
-    'Insurance premiums',
-    'Charitable donations',
-    'Investment management costs'
+  const faqs = [
+    {
+      title: "1. What kinds of tax returns do you prepare?",
+      description: "We manage individual, business (including LLCs, corporations, S-corps, partnerships), trusts, and estate tax returns."
+    },
+    {
+      title: "2. Can you help me maximize tax deductions for my SME?",
+      description: "Yes, we have been offering services to SMEs in finding and applying small business tax credits, deductions, and depreciation schedules to optimize your tax savings."
+    },
+    {
+      title: "3. How do you help with tax planning for capital gains and global compliance?",
+      description: "We help you manage capital gains tax and complex international tax laws to help you stay on the right side of the law and reduce liabilities."
+    },
+    {
+      title: "4. What support can you offer if I have an IRS audit or tax debt?",
+      description: "We represent you during IRS audits and help negotiate or resolve tax debts to cut stress."
+    },
+    {
+      title: "5. Do you deliver advice on tax-saving business structures and succession planning?",
+      description: "Yes. We assess your entity framework and help with succession and estate tax planning to elevate tax efficiency and secure your business future."
+    }
   ];
+
 
   return (
     <Layout>
@@ -213,11 +141,11 @@ export default function TaxPreparation() {
                 </div>
 
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
-                  Tax Preparation & <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-green-600">Planning</span>
+                  Professional <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-green-600">Tax Preparation </span> and Planning Services in the USA
                 </h1>
 
                 <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-xl">
-                  Strategic tax preparation and planning services that minimize your tax liability, ensure compliance, and optimize your financial position for long-term success.
+                  Managing taxes is a complicated and time-intensive process. Mavix Global’s specialist consulting and planning support helps your business stay compliant while maximizing tax efficiencies. We promise that every debit and credit is maximized, reducing your tax liabilities and enabling you to grow your business.
                 </p>
               </div>
 
@@ -226,11 +154,11 @@ export default function TaxPreparation() {
                   to="/contact"
                   className="group bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center justify-center"
                 >
-                  Get Tax Strategy
+                  Start Today
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <button className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 hover:border-teal-300 dark:hover:border-teal-500 px-8 py-4 rounded-2xl font-semibold transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-1">
-                  Free Tax Review
+                  Free Consultation
                 </button>
               </div>
 
@@ -275,21 +203,21 @@ export default function TaxPreparation() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold text-mavix-neutral-dark dark:text-white mb-6">
-              Comprehensive Tax Services
+              Why Choose Our Tax Services
             </h2>
             <p className="text-xl text-mavix-gray dark:text-gray-300 max-w-3xl mx-auto">
-              Professional tax preparation and strategic planning services that deliver optimal outcomes and compliance.
+              We, at Mavix Global, deliver expert tax services customized to increase savings with complete IRS compliance. Utilizing our in-depth knowledge of U.S. tax laws, combined with a commitment to accuracy and efficiency, we alleviate our clients’ stress. Associating with us is just like having access to our strategic planning, problem-free filings, and peace of mind during tax season.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700 animate-fade-in-up"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
-                <feature.icon className="h-12 w-12 text-teal-500 mb-6" />
+                <feature.icon className="h-12 w-12 text-emerald-500 mb-6" />
                 <h3 className="text-xl font-bold text-mavix-neutral-dark dark:text-white mb-4">
                   {feature.title}
                 </h3>
@@ -302,74 +230,36 @@ export default function TaxPreparation() {
         </div>
       </section>
 
-      {/* Tax Types */}
+      {/* Services Included */}
       <section className="py-24 bg-mavix-neutral-light dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20 animate-fade-in-up">
-            <h2 className="text-4xl md:text-5xl font-bold text-mavix-neutral-dark dark:text-white mb-6">
-              Specialized Tax Return Services
-            </h2>
-            <p className="text-xl text-mavix-gray dark:text-gray-300 max-w-3xl mx-auto">
-              Expert preparation of all types of tax returns with specialized knowledge for each category.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {taxTypes.map((type, index) => (
-              <div 
-                key={index} 
-                className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700 animate-fade-in-up"
-                style={{ animationDelay: `${index * 200}ms` }}
-              >
-                <type.icon className={`h-12 w-12 ${type.color} mb-6`} />
-                <h3 className="text-xl font-bold text-mavix-neutral-dark dark:text-white mb-4">
-                  {type.title}
-                </h3>
-                <p className="text-mavix-gray dark:text-gray-300 mb-6 leading-relaxed">
-                  {type.description}
-                </p>
-                <div className="space-y-2">
-                  {type.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center space-x-2">
-                      <CheckCircle className={`h-4 w-4 ${type.color} flex-shrink-0`} />
-                      <span className="text-sm text-mavix-gray dark:text-gray-300">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-24 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="animate-slide-in-left">
               <h2 className="text-4xl md:text-5xl font-bold text-mavix-neutral-dark dark:text-white mb-8">
-                Complete Tax Service Suite
+                Strategic Tax Planning Solutions
               </h2>
               <p className="text-xl text-mavix-gray dark:text-gray-300 mb-8 leading-relaxed">
-                From basic tax returns to complex tax planning strategies, we provide comprehensive tax services for all your needs.
+                Mavix Global delivers timely and thorough tax preparation and planning help meant to address different client needs in the USA.
+                Our team of experts ensures precise filings, compliance with federal and state tax laws, and judicious tax management to decrease liabilities.
+                We associate with individuals and businesses with personalized solutions for excellent financial health and simplified business processes year-round.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {services.map((service, index) => (
-                  <div 
-                    key={index} 
+                  <div
+                    key={index}
                     className="flex items-center space-x-3 animate-fade-in-up"
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
-                    <CheckCircle className="h-5 w-5 text-teal-500 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-emerald-500 flex-shrink-0" />
                     <span className="text-mavix-gray dark:text-gray-300">{service}</span>
                   </div>
                 ))}
               </div>
             </div>
             <div className="animate-slide-in-right">
-              <img 
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=600&fit=crop&crop=center&auto=format&q=80" 
-                alt="Tax preparation and compliance" 
+              <img
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=600&fit=crop&crop=center&auto=format&q=80"
+                alt="Financial statement preparation"
                 className="rounded-2xl shadow-2xl w-full"
               />
             </div>
@@ -377,95 +267,28 @@ export default function TaxPreparation() {
         </div>
       </section>
 
-      {/* Planning Strategies */}
-      <section className="py-24 bg-mavix-neutral-light dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20 animate-fade-in-up">
-            <h2 className="text-4xl md:text-5xl font-bold text-mavix-neutral-dark dark:text-white mb-6">
-              Strategic Tax Planning
-            </h2>
-            <p className="text-xl text-mavix-gray dark:text-gray-300 max-w-3xl mx-auto">
-              Proactive tax planning strategies that minimize your tax liability and optimize your financial position.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {planningStrategies.map((strategy, index) => (
-              <div 
-                key={index} 
-                className="bg-white dark:bg-gray-700 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-in-up"
-                style={{ animationDelay: `${index * 150}ms` }}
-              >
-                <h3 className="text-xl font-bold text-mavix-neutral-dark dark:text-white mb-4">
-                  {strategy.strategy}
-                </h3>
-                <p className="text-mavix-gray dark:text-gray-300 mb-4 leading-relaxed">
-                  {strategy.description}
-                </p>
-                <div className="bg-teal-50 dark:bg-teal-900 dark:bg-opacity-20 p-4 rounded-lg">
-                  <span className="text-teal-700 dark:text-teal-300 font-semibold text-sm">
-                    Benefit: {strategy.benefit}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
       <section className="py-24 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold text-mavix-neutral-dark dark:text-white mb-6">
-              Benefits of Professional Tax Services
+              Process We Follow
             </h2>
             <p className="text-xl text-mavix-gray dark:text-gray-300 max-w-3xl mx-auto">
-              Experience the advantages of professional tax preparation and planning that delivers results and peace of mind.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <div 
-                key={index} 
-                className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700 animate-fade-in-up"
-                style={{ animationDelay: `${index * 150}ms` }}
-              >
-                <benefit.icon className="h-12 w-12 text-teal-500 mb-6" />
-                <h3 className="text-xl font-bold text-mavix-neutral-dark dark:text-white mb-4">
-                  {benefit.title}
-                </h3>
-                <p className="text-mavix-gray dark:text-gray-300 leading-relaxed">
-                  {benefit.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section className="py-24 bg-mavix-neutral-light dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20 animate-fade-in-up">
-            <h2 className="text-4xl md:text-5xl font-bold text-mavix-neutral-dark dark:text-white mb-6">
-              Our Tax Planning Process
-            </h2>
-            <p className="text-xl text-mavix-gray dark:text-gray-300 max-w-3xl mx-auto">
-              A systematic approach that ensures optimal tax outcomes and strategic planning for your financial future.
+              We specialize in delivering a neat and professional tax preparation and planning roadmap given your unique financial situation.
+              Trusting and using advanced tools and proven trajectories to maximize accuracy, optimize tax savings, and maintain full compliance with IRS regulations is our way of dealing with tax filing.
+              From the very first discussion to following up, we know what it takes to stand by your side as your accounting partner.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {process.map((step, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="text-center animate-fade-in-up h-full"
                 style={{ animationDelay: `${index * 200}ms` }}
               >
                 <div className="bg-white dark:bg-gray-700 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 h-full flex flex-col">
-                  <div className="w-16 h-16 bg-gradient-to-r from-teal-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl">
+                  <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl">
                     {step.step}
                   </div>
                   <h3 className="text-xl font-bold text-mavix-neutral-dark dark:text-white mb-4">
@@ -481,39 +304,34 @@ export default function TaxPreparation() {
         </div>
       </section>
 
-      {/* Deduction Categories */}
-      <section className="py-24 bg-white dark:bg-gray-900">
+      <section className="py-24 bg-mavix-neutral-light dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="animate-slide-in-left">
-              <img 
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=600&fit=crop&crop=center&auto=format&q=80" 
-                alt="Tax deductions and optimization" 
-                className="rounded-2xl shadow-2xl w-full"
-              />
-            </div>
-            <div className="animate-slide-in-right">
-              <h2 className="text-4xl md:text-5xl font-bold text-mavix-neutral-dark dark:text-white mb-8">
-                Maximize Your Tax Deductions
-              </h2>
-              <p className="text-xl text-mavix-gray dark:text-gray-300 mb-8 leading-relaxed">
-                We identify and claim all eligible deductions to minimize your tax liability while ensuring full compliance.
-              </p>
-              <div className="space-y-4">
-                {deductionCategories.map((category, index) => (
-                  <div 
-                    key={index} 
-                    className="flex items-start space-x-4 animate-fade-in-up"
-                    style={{ animationDelay: `${index * 100}ms` }}
-                  >
-                    <div className="bg-teal-500 bg-opacity-10 p-2 rounded-full flex-shrink-0">
-                      <Calculator className="h-5 w-5 text-teal-500" />
-                    </div>
-                    <span className="text-mavix-gray dark:text-gray-300 text-lg">{category}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+          <div className="text-center mb-16 animate-fade-in-up">
+            <h2 className="text-4xl md:text-5xl font-bold text-mavix-neutral-dark dark:text-white mb-6">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-xl text-mavix-gray dark:text-gray-300 max-w-3xl mx-auto">
+              Find answers to common questions about our accounting outsourcing services.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <Accordion type="single" collapsible className="w-full">
+              {faqs.map((faq, index) => (
+                <AccordionItem key={index} value={`item-${index}`}>
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    <span className="font-semibold text-mavix-neutral-dark dark:text-white">
+                      {faq.title}
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <p className="text-mavix-gray dark:text-gray-300 pt-2">
+                      {faq.description}
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
         </div>
       </section>
@@ -524,21 +342,21 @@ export default function TaxPreparation() {
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Optimize Your Tax Position?
+              Get Your Taxes Right on Time!
             </h2>
             <p className="text-xl mb-10 text-gray-200">
-              Let our tax experts develop a strategic plan that minimizes your tax liability and maximizes your financial outcomes.
+              Team up with Mavix Global’s professional tax planning and preparation services in the USA to optimize filings, maximize savings, and avoid any costly mistakes.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="bg-white text-teal-600 hover:bg-gray-100 px-10 py-4 rounded-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center justify-center"
               >
-                Start Tax Planning
+                Begin Your Tax Journey
                 <ArrowRight className="ml-3 h-6 w-6" />
               </Link>
               <button className="border-2 border-white text-white hover:bg-white hover:text-teal-600 px-10 py-4 rounded-xl font-bold transition-all duration-300 transform hover:scale-105">
-                Free Tax Assessment
+                Book a Complimentary Consultation
               </button>
             </div>
           </div>

@@ -1,149 +1,128 @@
 import Layout from '../../components/Layout';
-import { Users, Clock, Shield, Calculator, CheckCircle, ArrowRight, FileText, DollarSign, TrendingUp, Award, Zap, Eye } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import {
+  Wallet,
+  FileSpreadsheet,
+  ShieldCheck,
+  Medal,
+  BarChart3,
+  ArrowRight,
+  CheckCircle,
+  Clock3,
+} from 'lucide-react';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 
 export default function PayrollOutsourcing() {
+
   const features = [
     {
-      icon: Users,
-      title: 'Complete Payroll Management',
-      description: 'End-to-end payroll processing including salary calculations, tax deductions, superannuation, and compliance management.'
+      icon: Wallet, // 💰 Payroll / Money
+      title: 'Payroll Expertise',
+      description:
+        'Get access to our in-depth US payroll veteran, ensuring wages, taxes, superannuation, and all entitlements are done correctly.',
     },
     {
-      icon: Shield,
-      title: 'Compliance Guarantee',
-      description: 'Stay compliant with ATO requirements, Fair Work Act, and superannuation obligations with expert oversight.'
+      icon: FileSpreadsheet, // 📄 Payroll records, payslips, admin
+      title: 'Comprehensive Payroll Administration',
+      description:
+        'We manage payslip generation, leave calculations, and employee onboarding, while configuring with payroll software for smooth operations.',
     },
     {
-      icon: Clock,
-      title: 'Timely Processing',
-      description: 'Accurate and timely payroll runs ensuring employees are paid correctly and on schedule every time.'
+      icon: ShieldCheck, // 🛡️ Compliance / Legal protection
+      title: 'USA Compliance',
+      description:
+        'Be compliant with Fair Labor Standards Act (FLSA), FICA, FUTA, and federal income tax rules, and local payroll laws.',
     },
     {
-      icon: Calculator,
-      title: 'Accurate Calculations',
-      description: 'Precise calculations for wages, overtime, allowances, deductions, PAYG tax, and superannuation contributions.'
+      icon: Clock3,
+      title: 'Timely, Accurate Processing',
+      description:
+        'Our team ensures timely payments and filings, enabling you to avoid errors, underpayments, and regulatory breaches every pay cycle.',
     },
     {
-      icon: FileText,
-      title: 'Comprehensive Reporting',
-      description: 'Detailed payroll reports, payment summaries, and analytics to help manage your workforce costs effectively.'
+      icon: Medal, // 🏅 Professional quality / Expertise
+      title: 'Quality & Professional Experience',
+      description:
+        'Our qualified payroll specialists unite real-world knowledge with a pledge to accuracy, privacy, and confidentiality for every client.',
     },
     {
-      icon: Zap,
-      title: 'Streamlined Process',
-      description: 'Efficient payroll workflows that integrate with your existing HR systems and time tracking solutions.'
-    }
+      icon: BarChart3, // 📊 Insights / Reporting
+      title: 'Business Performance Insights',
+      description:
+        'Get hold of in-depth payroll reports and analytics to underpin workforce strategy, budgeting, and judicious business decision-making.',
+    },
   ];
 
   const services = [
     'Employee Setup & Onboarding',
-    'Salary & Wage Calculations',
-    'PAYG Tax Calculations & Deductions',
-    'Superannuation Processing',
-    'Leave Entitlement Management',
-    'Overtime & Penalty Rate Calculations',
-    'Allowances & Reimbursements',
-    'Payslip Generation & Distribution',
-    'Payment Summary Preparation',
-    'ATO Reporting & Compliance',
-    'Workers Compensation Processing',
-    'Single Touch Payroll (STP)',
-    'Payroll Tax Compliance',
-    'Termination & Final Pay Processing',
-    'Award Interpretation & Application',
-    'Payroll Analytics & Reporting'
-  ];
-
-  const benefits = [
-    {
-      icon: DollarSign,
-      title: 'Cost Reduction',
-      description: 'Reduce payroll processing costs by up to 50% compared to in-house operations while improving accuracy.'
-    },
-    {
-      icon: Clock,
-      title: 'Time Savings',
-      description: 'Save 10-15 hours per week on payroll administration, freeing up time for strategic HR activities.'
-    },
-    {
-      icon: Shield,
-      title: 'Risk Mitigation',
-      description: 'Eliminate compliance risks with expert knowledge of employment law and tax regulations.'
-    },
-    {
-      icon: Award,
-      title: 'Professional Expertise',
-      description: 'Access to qualified payroll specialists and employment law experts without hiring costs.'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Scalability',
-      description: 'Easily scale payroll operations as your business grows without additional infrastructure investment.'
-    },
-    {
-      icon: Eye,
-      title: 'Enhanced Reporting',
-      description: 'Comprehensive payroll analytics and reporting for better workforce cost management and planning.'
-    }
-  ];
-
-  const complianceAreas = [
-    {
-      title: 'Fair Work Act Compliance',
-      description: 'Ensure compliance with minimum wage requirements, penalty rates, and leave entitlements.',
-      icon: Users
-    },
-    {
-      title: 'ATO Tax Obligations',
-      description: 'Accurate PAYG withholding, fringe benefits tax, and Single Touch Payroll reporting.',
-      icon: Calculator
-    },
-    {
-      title: 'Superannuation Guarantee',
-      description: 'Timely superannuation contributions and compliance with SG obligations.',
-      icon: Shield
-    },
-    {
-      title: 'Award Interpretation',
-      description: 'Correct application of modern awards, enterprise agreements, and industry standards.',
-      icon: FileText
-    }
+    'Salary & Wage Computations',
+    'Benefits & Retirement Plan Management (401(k), health plans)',
+    'W-2 and 1099 Form Preparation',
+    'Paid Leave and Other Leave Management',
+    'Allowances & Reimbursement Processing',
+    'Payslip Creation & Employee Self-Service Portals',
+    'Overtime & Premium Pay Management',
+    'Tax Filing & Relevant Compliance',
+    'Workers’ Compensation Insurance Administration',
+    'Federal, State & Local Tax Withholding & Deductions',
+    'Multi-State Payroll Processing',
+    'Payroll Tax Management & Reporting',
+    'Final Pay & Termination Settlements',
+    'Garnishments & Wage Attachments',
+    'Payroll Analytics & Reporting',
   ];
 
   const process = [
     {
       step: '01',
-      title: 'Setup & Configuration',
-      description: 'Initial setup of payroll system, employee records, and integration with your existing business systems.'
+      title: ' Initial Consultation',
+      description: 'Understand your business’s challenges and craft a tailored payroll outsourcing solution addressing your companys structure.'
     },
     {
       step: '02',
-      title: 'Data Collection',
-      description: 'Gather timesheets, leave applications, and other payroll data through secure, streamlined processes.'
+      title: 'Information Collection & Validation',
+      description: 'Gather staff data, pay slabs, and entitlements; cross-check records for accuracy and adherence.'
     },
     {
       step: '03',
-      title: 'Processing & Review',
-      description: 'Calculate pay, process deductions, and conduct thorough quality reviews before finalization.'
+      title: 'Payroll Processing & Reporting',
+      description: 'Tackle payroll processes, income calculations, tax and benefit deductions, leave handling, and create pay slips and tax filings for federal and state compliance.'
     },
     {
       step: '04',
-      title: 'Distribution & Reporting',
-      description: 'Distribute payslips, process payments, and provide comprehensive payroll reports and analytics.'
+      title: 'Compliance, Review & Support',
+      description: 'Perform regular inspections to ensure legal compliance, supply payroll reports and payslips, and provide support for audits, regulatory changes, and system updates.'
     }
   ];
 
-  const industries = [
-    'Professional Services',
-    'Healthcare & Medical',
-    'Retail & Hospitality',
-    'Manufacturing',
-    'Construction & Trades',
-    'Technology & IT',
-    'Education & Training',
-    'Non-Profit Organizations'
+  const faqs = [
+    {
+      title: "1. What is payroll outsourcing?",
+      description: "It is the process of hiring an agency/company to handle your payroll process for calculations, tax filing, to pay distribution.​​"
+    },
+    {
+      title: "2. How does payroll outsourcing work?",
+      description: "At, Mavix Global, we deliver employee data, process payroll, manage deductions, and make sure it is as per standard law."
+    },
+    {
+      title: "3. Why should a business outsource payroll?",
+      description: "To keep your budget in check, no cost for in-house hiring, and giving your 100% to your business.​"
+    },
+    {
+      title: "4. Is my payroll data safe with Mavix Global?",
+      description: "Yes. We use strict data protection systems and secure technology to keep it confidential and safe.​"
+    },
+    {
+      title: "5. Can you tailor your payroll services to my business needs?",
+      description: "Yes. We always create customized payroll solutions as per the needs of our clients that can fit your pay schedules and company size."
+    }
   ];
+
 
   return (
     <Layout>
@@ -170,11 +149,11 @@ export default function PayrollOutsourcing() {
                 </div>
 
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
-                  Professional <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Payroll</span> Outsourcing
+                  Insightful <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Payroll</span> Outsourcing Services for Every Business
                 </h1>
 
                 <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-xl">
-                  Comprehensive payroll management services that ensure accurate, compliant, and timely processing while reducing costs and administrative burden.
+                  A payroll team that emphasizes accuracy, promptness, and compliance, while benefiting from expert oversight and smooth pay cycle reporting.
                 </p>
               </div>
 
@@ -183,12 +162,12 @@ export default function PayrollOutsourcing() {
                   to="/contact"
                   className="group bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center justify-center"
                 >
-                  Start Payroll Service
+                  Call us Today
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <button className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-500 px-8 py-4 rounded-2xl font-semibold transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-1">
+                {/* <button className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-500 px-8 py-4 rounded-2xl font-semibold transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-1">
                   Free Payroll Audit
-                </button>
+                </button> */}
               </div>
 
               <div className="flex items-center space-x-8 pt-8">
@@ -232,21 +211,22 @@ export default function PayrollOutsourcing() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold text-mavix-neutral-dark dark:text-white mb-6">
-              Complete Payroll Management Solution
+              Why Choose Our Payroll Management Services USA?
             </h2>
             <p className="text-xl text-mavix-gray dark:text-gray-300 max-w-3xl mx-auto">
-              Professional payroll services that handle every aspect of employee compensation with accuracy and compliance.
+              We are one of the fastest-growing agencies offering professional payroll management services in the USA. Our qualified team makes it a point to deliver precise, correct payroll solutions, on-time tax withholding, and as per the applicable state regulations.
+              We make your life simpler by managing your complex payroll tasks, reducing the possibility of penalties, and giving you enough time to concentrate on your business and take it to the next level.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700 animate-fade-in-up"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
-                <feature.icon className="h-12 w-12 text-purple-500 mb-6" />
+                <feature.icon className="h-12 w-12 text-emerald-500 mb-6" />
                 <h3 className="text-xl font-bold text-mavix-neutral-dark dark:text-white mb-4">
                   {feature.title}
                 </h3>
@@ -259,34 +239,35 @@ export default function PayrollOutsourcing() {
         </div>
       </section>
 
-      {/* Services Included */}
       <section className="py-24 bg-mavix-neutral-light dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="animate-slide-in-left">
               <h2 className="text-4xl md:text-5xl font-bold text-mavix-neutral-dark dark:text-white mb-8">
-                Comprehensive Payroll Services
+                Suite of Comprehensive Payroll Management Solutions
               </h2>
               <p className="text-xl text-mavix-gray dark:text-gray-300 mb-8 leading-relaxed">
-                Our payroll outsourcing covers every aspect of employee compensation and compliance requirements.
+                We deliver end-to-end payroll outsourcing solutions for employee compensation and legal compliance with the USA regulations, ensuring a seamless pay cycle every time.
+                With extensive knowledge and experience in U.S. payroll regulations, our services ensure that your employees are paid the proper wages and in compliance every time.
+                We manage every section of payroll management, starting from onboarding and tax withholdings to benefits management, wage calculations, and federal/state reporting. We help you cut administrative tasks while remaining within the legal parameters of complex U.S. payroll regulations.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {services.map((service, index) => (
-                  <div 
-                    key={index} 
+                  <div
+                    key={index}
                     className="flex items-center space-x-3 animate-fade-in-up"
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
-                    <CheckCircle className="h-5 w-5 text-purple-500 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-emerald-500 flex-shrink-0" />
                     <span className="text-mavix-gray dark:text-gray-300">{service}</span>
                   </div>
                 ))}
               </div>
             </div>
             <div className="animate-slide-in-right">
-              <img 
-                src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=600&h=600&fit=crop&crop=center&auto=format&q=80" 
-                alt="Payroll processing and management" 
+              <img
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=600&fit=crop&crop=center&auto=format&q=80"
+                alt="Bookkeeping services overview"
                 className="rounded-2xl shadow-2xl w-full"
               />
             </div>
@@ -294,91 +275,29 @@ export default function PayrollOutsourcing() {
         </div>
       </section>
 
-      {/* Compliance Section */}
+      {/* Benefits Grid */}
       <section className="py-24 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold text-mavix-neutral-dark dark:text-white mb-6">
-              Comprehensive Compliance Management
+              Our Process
             </h2>
             <p className="text-xl text-mavix-gray dark:text-gray-300 max-w-3xl mx-auto">
-              Stay compliant with all Australian employment and tax obligations through our expert compliance management.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {complianceAreas.map((area, index) => (
-              <div 
-                key={index} 
-                className="bg-purple-50 dark:bg-purple-900 dark:bg-opacity-20 p-8 rounded-2xl border-2 border-purple-100 dark:border-purple-800 hover:border-purple-300 dark:hover:border-purple-600 transition-all duration-300 animate-fade-in-up"
-                style={{ animationDelay: `${index * 150}ms` }}
-              >
-                <area.icon className="h-12 w-12 text-purple-500 mb-6" />
-                <h3 className="text-xl font-bold text-mavix-neutral-dark dark:text-white mb-4">
-                  {area.title}
-                </h3>
-                <p className="text-mavix-gray dark:text-gray-300 leading-relaxed">
-                  {area.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-24 bg-mavix-neutral-light dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20 animate-fade-in-up">
-            <h2 className="text-4xl md:text-5xl font-bold text-mavix-neutral-dark dark:text-white mb-6">
-              Transform Your Payroll Operations
-            </h2>
-            <p className="text-xl text-mavix-gray dark:text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of professional payroll outsourcing that delivers efficiency, accuracy, and peace of mind.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <div 
-                key={index} 
-                className="bg-white dark:bg-gray-700 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-in-up"
-                style={{ animationDelay: `${index * 150}ms` }}
-              >
-                <benefit.icon className="h-12 w-12 text-purple-500 mb-6" />
-                <h3 className="text-xl font-bold text-mavix-neutral-dark dark:text-white mb-4">
-                  {benefit.title}
-                </h3>
-                <p className="text-mavix-gray dark:text-gray-300 leading-relaxed">
-                  {benefit.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section className="py-24 bg-white dark:bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20 animate-fade-in-up">
-            <h2 className="text-4xl md:text-5xl font-bold text-mavix-neutral-dark dark:text-white mb-6">
-              Our Payroll Process
-            </h2>
-            <p className="text-xl text-mavix-gray dark:text-gray-300 max-w-3xl mx-auto">
-              A streamlined, efficient process that ensures accurate and timely payroll processing every time.
+              Our payroll process is engineered to provide a seamless and personalized outsourcing solution for your business. Beginning with a professional consultation, we garner and verify all necessary employee and pay data, then perform payroll calculations, including taxes and benefits.
+              We also ensure that the payroll processing is in line with the relevant legal filings and manage regular audits.
+              Eventually, we also provide in-depth statements and ongoing support to ensure the payroll process is clean and flawless.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {process.map((step, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="text-center animate-fade-in-up h-full"
                 style={{ animationDelay: `${index * 200}ms` }}
               >
-                <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700 h-full flex flex-col">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl">
+                <div className="bg-white dark:bg-gray-700 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 h-full flex flex-col">
+                  <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl">
                     {step.step}
                   </div>
                   <h3 className="text-xl font-bold text-mavix-neutral-dark dark:text-white mb-4">
@@ -394,28 +313,34 @@ export default function PayrollOutsourcing() {
         </div>
       </section>
 
-      {/* Industries Section */}
       <section className="py-24 bg-mavix-neutral-light dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold text-mavix-neutral-dark dark:text-white mb-6">
-              Industries We Serve
+              Frequently Asked Questions
             </h2>
             <p className="text-xl text-mavix-gray dark:text-gray-300 max-w-3xl mx-auto">
-              Specialized payroll solutions tailored to meet the unique requirements of various industries.
+              Find answers to common questions about our accounting outsourcing services.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {industries.map((industry, index) => (
-              <div 
-                key={index} 
-                className="bg-white dark:bg-gray-700 p-6 rounded-xl text-center hover:bg-purple-50 dark:hover:bg-purple-900 dark:hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105 animate-fade-in-up border border-purple-100 dark:border-purple-800"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <span className="text-mavix-gray dark:text-gray-300 font-medium">{industry}</span>
-              </div>
-            ))}
+          <div className="max-w-4xl mx-auto">
+            <Accordion type="single" collapsible className="w-full">
+              {faqs.map((faq, index) => (
+                <AccordionItem key={index} value={`item-${index}`}>
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    <span className="font-semibold text-mavix-neutral-dark dark:text-white">
+                      {faq.title}
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <p className="text-mavix-gray dark:text-gray-300 pt-2">
+                      {faq.description}
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
         </div>
       </section>
@@ -426,21 +351,21 @@ export default function PayrollOutsourcing() {
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Streamline Your Payroll?
+              Looking to Outsource Payroll Solutions?
             </h2>
             <p className="text-xl mb-10 text-gray-200">
-              Let our payroll experts handle your employee compensation while you focus on growing your business.
+              Let’s help you manage your daily payroll solution and offer ample resources and time for more productive work!
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="bg-white text-purple-600 hover:bg-gray-100 px-10 py-4 rounded-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center justify-center"
               >
-                Start Payroll Outsourcing
+                Call our experts
                 <ArrowRight className="ml-3 h-6 w-6" />
               </Link>
               <button className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-10 py-4 rounded-xl font-bold transition-all duration-300 transform hover:scale-105">
-                Free Payroll Assessment
+                Get a free Payroll audit
               </button>
             </div>
           </div>

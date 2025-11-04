@@ -14,25 +14,25 @@ export default function Index() {
   // Data arrays - declared first to avoid temporal dead zone issues
   const heroSlides = [
     {
-      title: "Transform Your Business Vision Into Reality",
+      title: "Smart Accounting Outsourcing for Digital Excellence",
       subtitle: "Future-Ready Strategies",
-      description: "Empower your organization with innovative consulting solutions that drive sustainable growth and competitive advantage in today's dynamic marketplace.",
+      description: "Get the benefits of technology-powered accounting services and be competitive, profitable, and efficient.",
       bgColor: "from-mavix-navy via-mavix-navy to-mavix-blue",
       buttonText: "Discover Solutions",
       bgImage: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&h=1080&fit=crop&crop=center&auto=format&q=80"
     },
     {
-      title: "Accelerate Digital Excellence",
+      title: "Bookkeeping Services for Small Businesses",
       subtitle: "Technology Leadership",
-      description: "Bridge the gap between ambition and achievement with cutting-edge technology implementations and strategic digital transformation initiatives.",
+      description: "Professional, reachable, and personalized, keeping your books updated to stay compliant and competitive.",
       bgColor: "from-mavix-blue via-purple-800 to-mavix-navy",
       buttonText: "Explore Innovation",
       bgImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&h=1080&fit=crop&crop=center&auto=format&q=80"
     },
     {
-      title: "Optimize Performance at Scale",
+      title: "Your Finance Partner Who Knows Your Business",
       subtitle: "Operational Excellence",
-      description: "Maximize efficiency and unlock untapped potential through data-driven insights and streamlined operational frameworks tailored to your industry.",
+      description: "Get innovative consulting services that drive growth and give an edge in today's dynamic marketplace.",
       bgColor: "from-teal-800 via-mavix-navy to-mavix-blue",
       buttonText: "Learn More",
       bgImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&h=1080&fit=crop&crop=center&auto=format&q=80"
@@ -42,32 +42,32 @@ export default function Index() {
   const services = [
     {
       icon: TrendingUp,
-      title: "Financial Modeling & Forecasting",
-      description: "Advanced mathematical models and predictive analytics that optimize financial performance and strategic decision-making.",
+      title: "Excellence Meant for Results",
+      description: "Streamlined strategies, mastered across many industry-driven implementations, leading to consistent performance in every market.",
       link: "/services/strategy",
       color: "text-mavix-blue"
     },
     {
       icon: BarChart3,
-      title: "Performance Analytics",
-      description: "Real-time financial metrics, KPI dashboards, and comprehensive reporting systems for enhanced visibility.",
+      title: "Business Impact, Measurable and Guaranteed",
+      description: "Our result-driven approach offers quantifiable results; every move is calculated, tracked, and leads to transparent ROI.",
       link: "/services/data-analytics",
       color: "text-emerald-600"
     },
     {
       icon: Target,
-      title: "Strategic Financial Planning",
-      description: "Long-term financial strategy development, capital allocation optimization, and investment planning frameworks.",
+      title: "Your Growth, Our Commitment",
+      description: "We’re not just service providers, we’re your comrades, driving sustained growth, consistent innovation, and alliances that matter.",
       link: "/services/cloud-engineering",
       color: "text-purple-600"
     },
-    {
-      icon: Shield,
-      title: "Risk Assessment & Compliance",
-      description: "Comprehensive risk management, regulatory compliance monitoring, and financial governance frameworks.",
-      link: "/services/risk-compliance",
-      color: "text-orange-600"
-    }
+    // {
+    //   icon: Shield,
+    //   title: "Risk Assessment & Compliance",
+    //   description: "Comprehensive risk management, regulatory compliance monitoring, and financial governance frameworks.",
+    //   link: "/services/risk-compliance",
+    //   color: "text-orange-600"
+    // }
   ];
 
   const caseStudies = [
@@ -114,7 +114,7 @@ export default function Index() {
     {
       quote: "The level of expertise and dedication demonstrated by their team was extraordinary. Our business trajectory changed dramatically.",
       author: "David Chen",
-      title: "Managing Director, FutureFlow Systems", 
+      title: "Managing Director, FutureFlow Systems",
       rating: 5
     },
     {
@@ -169,11 +169,10 @@ export default function Index() {
           {heroSlides.map((slide, index) => (
             <div
               key={index}
-              className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
-                index === currentSlide
-                  ? 'opacity-100 scale-100'
-                  : 'opacity-0 scale-100'
-              }`}
+              className={`absolute inset-0 transition-all duration-1000 ease-in-out ${index === currentSlide
+                ? 'opacity-100 scale-100'
+                : 'opacity-0 scale-100'
+                }`}
             >
               <div className="relative w-full h-full">
                 {/* Background Image */}
@@ -277,11 +276,10 @@ export default function Index() {
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`transition-all duration-300 rounded-full ${
-                index === currentSlide
-                  ? 'w-8 h-3 bg-white'
-                  : 'w-3 h-3 bg-white/50 hover:bg-white/75'
-              }`}
+              className={`transition-all duration-300 rounded-full ${index === currentSlide
+                ? 'w-8 h-3 bg-white'
+                : 'w-3 h-3 bg-white/50 hover:bg-white/75'
+                }`}
             />
           ))}
         </div>
@@ -306,7 +304,7 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold text-mavix-neutral-dark dark:text-white mb-6">
-              Comprehensive Financial Planning and Analysis
+              Why Rely on Mavix Global
             </h2>
             <p className="text-xl text-mavix-gray dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Advanced financial modeling, strategic analysis, and data-driven insights that optimize performance and accelerate sustainable growth across all business dimensions.
@@ -331,7 +329,7 @@ export default function Index() {
                 <p className="text-mavix-gray dark:text-gray-300 mb-6 leading-relaxed">
                   {service.description}
                 </p>
-                <Link 
+                <Link
                   to={service.link}
                   className="text-mavix-blue hover:text-mavix-navy font-semibold inline-flex items-center group-hover:translate-x-2 transition-all duration-300"
                 >
@@ -404,75 +402,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Animated Case Studies */}
-      <section className="py-24 bg-white dark:bg-gray-900 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20 animate-fade-in-up">
-            <div className="mb-6">
-              <span className="bg-gradient-to-r from-mavix-blue to-purple-600 text-white px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wide">
-                Success Portfolio
-              </span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-mavix-neutral-dark dark:text-white mb-6 leading-tight">
-              Success Stories That Inspire Innovation
-            </h2>
-            <p className="text-xl text-mavix-gray dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Discover how we've transformed challenges into opportunities, delivering exceptional outcomes for industry pioneers and market leaders.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {caseStudies.map((study, index) => (
-              <div
-                key={index}
-                className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden hover:shadow-2xl hover:-translate-y-4 transition-all duration-500 group animate-fade-in-up flex flex-col h-full"
-                style={{ animationDelay: `${index * 200}ms` }}
-              >
-                <div className="relative overflow-hidden">
-                  <img
-                    src={study.image}
-                    alt={study.title}
-                    className="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute top-4 left-4 bg-mavix-blue text-white px-3 py-1 rounded-full text-sm font-medium">
-                    {study.category}
-                  </div>
-                </div>
-                <div className="p-8 flex flex-col flex-grow">
-                  <div className="text-sm text-emerald-600 dark:text-emerald-400 font-semibold mb-3 uppercase tracking-wide">
-                    {study.industry}
-                  </div>
-                  <h3 className="text-xl font-bold text-mavix-neutral-dark dark:text-white mb-4 group-hover:text-mavix-blue transition-colors duration-300">
-                    {study.title}
-                  </h3>
-                  <div className="text-3xl font-bold text-mavix-blue mb-4 animate-pulse">
-                    {study.metric}
-                  </div>
-                  <p className="text-mavix-gray dark:text-gray-300 mb-6 leading-relaxed flex-grow">
-                    {study.description}
-                  </p>
-                  <Link
-                    to={study.link}
-                    className="text-mavix-blue hover:text-mavix-navy font-semibold inline-flex items-center group-hover:translate-x-2 transition-all duration-300 mt-auto"
-                  >
-                    Read Full Story
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-16 animate-fade-in-up" style={{ animationDelay: '800ms' }}>
-            <Link 
-              to="/case-studies"
-              className="bg-mavix-navy hover:bg-mavix-blue text-white px-10 py-4 rounded-lg font-semibold transition-all duration-300 inline-flex items-center transform hover:scale-105 hover:shadow-xl"
-            >
-              Explore All Success Stories
-              <ArrowRight className="ml-3 h-5 w-5" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Professional Client Showcase */}
       <section className="py-24 bg-gradient-to-br from-white via-mavix-neutral-light to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 overflow-hidden relative">
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-mavix-blue/5 to-transparent"></div>
@@ -496,11 +425,10 @@ export default function Index() {
               {clients.map((client, index) => (
                 <div
                   key={index}
-                  className={`text-center transition-all duration-700 transform animate-fade-in-up h-full ${
-                    index === currentClientIndex
-                      ? 'scale-105 opacity-100'
-                      : 'opacity-70 hover:opacity-100 hover:scale-105'
-                  }`}
+                  className={`text-center transition-all duration-700 transform animate-fade-in-up h-full ${index === currentClientIndex
+                    ? 'scale-105 opacity-100'
+                    : 'opacity-70 hover:opacity-100 hover:scale-105'
+                    }`}
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <div className="bg-white dark:bg-gray-700 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 border border-gray-200 dark:border-gray-600 hover:border-mavix-blue dark:hover:border-mavix-blue group h-full flex flex-col justify-center">
