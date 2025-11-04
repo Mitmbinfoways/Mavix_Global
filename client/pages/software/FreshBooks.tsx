@@ -7,46 +7,44 @@ export default function FreshBooks() {
   const features = [
     {
       icon: Calculator,
-      title: 'Comprehensive Financial Coordination',
-      description: 'Complete package of accounting services that deploys advanced invoicing, inventory management, reporting, and entire financial management for better business performance.'
+      title: 'All-in-One Financial Management Tweaked for You',
+      description: 'Mavix Global configures FreshBooks for centralized invoicing, expense monitoring, payroll integration, and cash flow tracking—all through a centralized cloud system built for your business success.'
     },
     {
       icon: BarChart3,
-      title: 'Live Analytics & Partnership',
-      description: 'Access personalized dashboards and live business data for immediate updates, fused with a multi-user platform with role-based permissions for smooth team functioning.'
+      title: 'Ironclad US Tax & Payroll Compliance',
+      description: 'Our services confirm your books always stay within the ambit of IRS and state tax regulations, including 1099 contractor forms, payroll tax filings, benefits management, and labor law compliance—eliminating risks and penalties.'
     },
     {
       icon: Users,
-      title: 'Process Optimization',
-      description: 'Simplify day-to-day business functions by digitizing the process for improved workflow.'
+      title: 'Secure Data Access from Anywhere, Anytime',
+      description: 'FreshBooks’ advanced cloud solutions are packed with multi-factor authentication, encrypted information, backups, and easy integration with US tax and payment apps, simplifying your business management and total control.'
     },
     {
       icon: Cloud,
-      title: 'Flexible Execution & Security',
-      description: 'Opt for the best implementation module, ideal for your business architecture—whether cloud-based or on-premise—supported by enterprise-level security, like encryption, audit log, and adherence with global standards.'
+      title: 'Smart Automation to Save Time & Reduce Errors',
+      description: 'It’s time to automate your repetitive tasks, such as expense grouping, invoicing, payment reminders, and bank reconciliations, thereby freeing you up with enough resources and time to focus on growing your business.'
     },
   ];
 
   const services = [
-    'Sage Software Setup & Configuration',
-    'Chart of Accounts Customization',
-    'Invoice & Payment Template Design',
-    'Payroll Integration & Processing(US Payroll Compliance Included)',
-    'Bank Feed Setup & Reconciliation',
-    'Inventory and Expense Management',
-    'Multi - Currency Accounting',
-    'Third-Party Application Integration',
-    'User Training & Support',
-    'Ongoing System Optimization'
+    'Personalized FreshBooks Account Setup & Training',
+    'Automated Expense Monitoring',
+    'Live Budgeting, Forecasting & Financial Reporting',
+    'Custom Chart of Accounts & Branded Invoice Design',
+    '1099 Contractor & Payroll Tax Compliance (Federal + State)',
+    'Automated Bank Feed Integration & On-time Reconciliation',
+    'Time Tracking & Project Accounting for Service Businesses',
+    'Continuous System Optimization with Expert Support'
   ];
 
   const benefits = [
-    'Reduce manual efforts by 80 percent via digitized bank feeds',
-    'Get financial documents 10 times faster',
-    'Access your most advanced financial reports from anywhere, anytime',
-    'Make tax filing, payroll, and legal compliance easier',
-    'Configure with almost 700 business applications',
-    'Send invoices with automated notifications'
+    'Up to 80 percent reduction in manual bookkeeping effort',
+    'Faster tax filing, payroll, and compliance as per the US standards',
+    'Access IRS-approved reporting and audit-ready accounting',
+    '2X faster invoicing with live payment tracking and instant reminders',
+    'Live cash flow accessibility and detailed financial dashboards',
+    'Synchronization with advanced US-based payment and HR tools like QuickBooks Payroll'
   ];
 
   return (
@@ -74,11 +72,11 @@ export default function FreshBooks() {
                 </div>
 
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600">FreshBooks</span> Accounting Services
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600">FreshBooks</span> Accounting Services USA
                 </h1>
 
                 <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-xl">
-                  Expert FreshBooks implementation, training, and support services designed for Australian freelancers, agencies, and service-based businesses.
+                  Revolutionize your business finance using expert FreshBooks assistance meant for clean and easy setup, professional training, and ongoing help. Mavix Global’s FreshBooks Accounting Services help U.S. agencies lighten cloud accounting, stay adherent, and unveil powerful financial analytics to fuel growth.
                 </p>
               </div>
 
@@ -87,11 +85,11 @@ export default function FreshBooks() {
                   to="/contact"
                   className="group bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center justify-center"
                 >
-                  Get FreshBooks Setup
+                  Get free FreshBooks Demo
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <button className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 hover:border-emerald-300 dark:hover:border-emerald-500 px-8 py-4 rounded-2xl font-semibold transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-1">
-                  Free FreshBooks Demo
+                  Connect for FreshBooks Setup
                 </button>
               </div>
 
@@ -136,10 +134,10 @@ export default function FreshBooks() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold text-mavix-neutral-dark dark:text-white mb-6">
-              Why FreshBooks is Perfect for Australian Service Businesses
+              Why Partner with Mavix Global for FreshBooks Accounting?
             </h2>
             <p className="text-xl text-mavix-gray dark:text-gray-300 max-w-3xl mx-auto">
-              Discover how FreshBooks' user-friendly features combined with our expert implementation can simplify your accounting and boost your business productivity.
+              FreshBooks’ user-friendly platform, blended with Mavix Global’s expert U.S. accounting knowledge base, gives you a complete solution to plan your bookkeeping and maximize financial success. Here’s why innovative businesses trust us
             </p>
           </div>
 
@@ -169,10 +167,10 @@ export default function FreshBooks() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="animate-slide-in-left">
               <h2 className="text-4xl md:text-5xl font-bold text-mavix-neutral-dark dark:text-white mb-8">
-                Complete Xero Accounting Services
+                Comprehensive FreshBooks Accounting Services Customized for You
               </h2>
               <p className="text-xl text-mavix-gray dark:text-gray-300 mb-8 leading-relaxed">
-                From 1st setup to ongoing support and optimization, Mavix Global offers complete Xero accounting services as per your business needs.
+                From FreshBooks installation and customized account logs to branded invoices and multi-state payroll syncing, Mavix Global provides complete lifecycle assistance, training, and a roadmap tailored to your business needs.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {services.map((service, index) => (
@@ -211,10 +209,10 @@ export default function FreshBooks() {
             </div>
             <div className="animate-slide-in-right">
               <h2 className="text-4xl md:text-5xl font-bold text-mavix-neutral-dark dark:text-white mb-8">
-                Transform Your Accounting with Xero
+                Discover the Full Potential of Your Financial Management with FreshBooks
               </h2>
               <p className="text-xl text-mavix-gray dark:text-gray-300 mb-8 leading-relaxed">
-                Deploy the power of cloud accounting to strategize your business operations and enhance financial accuracy.
+                With Mavix Global and FreshBooks, you can expect:
               </p>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
@@ -241,10 +239,10 @@ export default function FreshBooks() {
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Simplify with FreshBooks?
+              Are you looking to Boost Your Accounting Efficiency?
             </h2>
             <p className="text-xl mb-10 text-gray-200">
-              Let our FreshBooks experts set up and optimize the perfect solution for your Australian service business, enhancing productivity and profitability.
+              Connect with us for a free consultation and explore how our FreshBooks veterans can develop secure, compliant, and scalable accounting tools to simplify your business account.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link
@@ -255,7 +253,7 @@ export default function FreshBooks() {
                 <ArrowRight className="ml-3 h-6 w-6" />
               </Link>
               <button className="border-2 border-white text-white hover:bg-white hover:text-emerald-600 px-10 py-4 rounded-xl font-bold transition-all duration-300 transform hover:scale-105">
-                Schedule FreshBooks Demo
+                Schedule a FreshBooks Demo
               </button>
             </div>
           </div>

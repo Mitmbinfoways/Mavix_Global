@@ -2,8 +2,10 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Target, Shield, Zap, TrendingUp, Users, CheckCircle, Star, ChevronLeft, ChevronRight, Play, BarChart3, Clock } from 'lucide-react';
 import Layout from '../components/Layout';
+import { useTheme } from '../contexts/ThemeContext';
 
 export default function Index() {
+  const { theme } = useTheme(); // Use the theme context
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentClientIndex, setCurrentClientIndex] = useState(0);
   const [newsletterEmail, setNewsletterEmail] = useState('');
@@ -61,13 +63,13 @@ export default function Index() {
       link: "/services/cloud-engineering",
       color: "text-purple-600"
     },
-    // {
-    //   icon: Shield,
-    //   title: "Risk Assessment & Compliance",
-    //   description: "Comprehensive risk management, regulatory compliance monitoring, and financial governance frameworks.",
-    //   link: "/services/risk-compliance",
-    //   color: "text-orange-600"
-    // }
+    {
+      icon: Shield,
+      title: "Risk Assessment & Compliance",
+      description: "Comprehensive risk management, regulatory compliance monitoring, and financial governance frameworks.",
+      link: "/services/risk-compliance",
+      color: "text-orange-600"
+    }
   ];
 
   const caseStudies = [
@@ -181,7 +183,7 @@ export default function Index() {
                   style={{ backgroundImage: `url(${slide.bgImage})` }}
                 />
                 {/* Modern Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-blue-900/80 to-indigo-900/90" />
+                <div className={`absolute inset-0 bg-gradient-to-br ${theme === 'dark' ? 'from-gray-900/90 via-gray-900/80 to-gray-900/90' : 'from-slate-900/90 via-blue-900/80 to-indigo-900/90'}`} />
                 {/* Subtle Pattern */}
                 <div className="absolute inset-0 bg-grid-slate-100 dark:bg-grid-slate-700 bg-[size:60px_60px] [mask-image:radial-gradient(white,transparent_70%)] opacity-10" />
               </div>
@@ -472,10 +474,10 @@ export default function Index() {
       <section className="py-24 bg-white dark:bg-gray-900 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20 animate-fade-in-up">
-            <h2 className="text-4xl md:text-5xl font-bold text-mavix-neutral-dark mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-mavix-neutral-dark dark:text-white mb-6">
               Voices of Transformation
             </h2>
-            <p className="text-xl text-mavix-gray max-w-3xl mx-auto">
+            <p className="text-xl text-mavix-gray dark:text-gray-300 max-w-3xl mx-auto">
               Authentic testimonials from leaders who have experienced the Mavix Global difference
             </p>
           </div>
@@ -483,7 +485,7 @@ export default function Index() {
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-mavix-neutral-light to-white dark:from-gray-800 dark:to-gray-700 p-8 rounded-2xl border-2 border-transparent hover:border-mavix-blue shadow-lg hover:shadow-2xl transition-all duration-500 animate-fade-in-up transform hover:-translate-y-2"
+                className="bg-gradient-to-br from-mavix-neutral-light to-white dark:from-gray-800 dark:to-gray-700 p-8 rounded-2xl border-2 border-transparent hover:border-mavix-blue dark:hover:border-mavix-blue shadow-lg hover:shadow-2xl transition-all duration-500 animate-fade-in-up transform hover:-translate-y-2"
                 style={{ animationDelay: `${index * 200}ms` }}
               >
                 <div className="flex mb-6">
@@ -609,44 +611,44 @@ export default function Index() {
       {/* Enhanced Newsletter Modal */}
       {showNewsletterModal && (
         <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 p-4 animate-fade-in">
-          <div className="bg-white rounded-2xl p-10 max-w-md w-full transform animate-scale-in shadow-2xl">
-            <h3 className="text-3xl font-bold text-mavix-neutral-dark mb-6 text-center">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl p-10 max-w-md w-full transform animate-scale-in shadow-2xl">
+            <h3 className="text-3xl font-bold text-mavix-neutral-dark dark:text-white mb-6 text-center">
               Join Our Network
             </h3>
-            <p className="text-mavix-gray mb-8 text-center">
+            <p className="text-mavix-gray dark:text-gray-300 mb-8 text-center">
               Get exclusive access to strategic insights and industry intelligence
             </p>
             <form onSubmit={handleNewsletterSubmit}>
               <div className="mb-6">
-                <label className="block text-mavix-neutral-dark font-semibold mb-3">
+                <label className="block text-mavix-neutral-dark dark:text-white font-semibold mb-3">
                   Full Name
                 </label>
                 <input
                   type="text"
                   value={newsletterName}
                   onChange={(e) => setNewsletterName(e.target.value)}
-                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-mavix-blue focus:border-transparent transition-all duration-300"
+                  className="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-mavix-blue focus:border-transparent transition-all duration-300"
                   placeholder="Enter your name"
                   required
                 />
               </div>
               <div className="mb-6">
-                <label className="block text-mavix-neutral-dark font-semibold mb-3">
+                <label className="block text-mavix-neutral-dark dark:text-white font-semibold mb-3">
                   Email Address
                 </label>
                 <input
                   type="email"
                   value={newsletterEmail}
                   onChange={(e) => setNewsletterEmail(e.target.value)}
-                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-mavix-blue focus:border-transparent transition-all duration-300"
+                  className="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-mavix-blue focus:border-transparent transition-all duration-300"
                   placeholder="Enter your email"
                   required
                 />
               </div>
               <div className="mb-8">
                 <label className="flex items-start">
-                  <input type="checkbox" className="mr-3 mt-1" required />
-                  <span className="text-sm text-mavix-gray leading-relaxed">
+                  <input type="checkbox" className="mr-3 mt-1 dark:bg-gray-700 dark:border-gray-600 rounded" required />
+                  <span className="text-sm text-mavix-gray dark:text-gray-300 leading-relaxed">
                     I consent to receiving strategic insights and industry updates from Mavix Global. Privacy compliant and unsubscribe anytime.
                   </span>
                 </label>
@@ -654,14 +656,14 @@ export default function Index() {
               <div className="flex space-x-4">
                 <button
                   type="submit"
-                  className="flex-1 bg-mavix-navy text-white py-3 rounded-lg font-semibold hover:bg-mavix-blue transition-all duration-300 transform hover:scale-105"
+                  className="flex-1 bg-mavix-navy dark:bg-mavix-blue text-white py-3 rounded-lg font-semibold hover:bg-mavix-blue dark:hover:bg-blue-600 transition-all duration-300 transform hover:scale-105"
                 >
                   Subscribe Now
                 </button>
                 <button
                   type="button"
                   onClick={() => setShowNewsletterModal(false)}
-                  className="flex-1 border-2 border-gray-300 text-mavix-gray py-3 rounded-lg font-semibold hover:bg-gray-50 transition-all duration-300"
+                  className="flex-1 border-2 border-gray-300 dark:border-gray-600 text-mavix-gray dark:text-gray-300 py-3 rounded-lg font-semibold hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-300"
                 >
                   Cancel
                 </button>
